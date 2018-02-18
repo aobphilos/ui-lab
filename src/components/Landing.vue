@@ -1,6 +1,6 @@
 <template>
     <div class="wrapper">
-        <div class="header header-filter" style="background-image: url('https://images.unsplash.com/photo-1423655156442-ccc11daa4e99?crop=entropy&dpr=2&fit=crop&fm=jpg&h=750&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1450');">
+        <div class="header header-filter">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
@@ -68,11 +68,11 @@
                     <h2 class="title">Here is our team</h2>
 
                     <div class="team">
-                        <div class="row">
+                        <div class="row" v-for="member in members" :key="member.id">
                             <div class="col-md-4">
                                 <div class="team-player">
-                                    <img src="assets/img/kit/avatar.jpg" alt="Thumbnail Image" class="img-raised img-circle">
-                                    <h4 class="title">Gigi Hadid
+                                    <img :src="member.img" alt="Thumbnail Image" class="img-raised img-circle">
+                                    <h4 class="title">{{member.name}} {{member.ext}}
                                         <br />
                                         <small class="text-muted">Model</small>
                                     </h4>
@@ -87,45 +87,6 @@
                                     </a>
                                     <a href="#pablo" class="btn btn-simple btn-just-icon btn-default">
                                         <i class="fa fa-facebook-square"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="team-player">
-                                    <img src="assets/img/kit/christian.jpg" alt="Thumbnail Image" class="img-raised img-circle">
-                                    <h4 class="title">Christian Louboutin
-                                        <br />
-                                        <small class="text-muted">Designer</small>
-                                    </h4>
-                                    <p class="description">You can write here details about one of your team members. You can give more details
-                                        about what they do. Feel free to add some
-                                        <a href="#">links</a> for people to be able to follow them outside the site.</p>
-                                    <a href="#pablo" class="btn btn-simple btn-just-icon">
-                                        <i class="fa fa-twitter"></i>
-                                    </a>
-                                    <a href="#pablo" class="btn btn-simple btn-just-icon">
-                                        <i class="fa fa-linkedin"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="team-player">
-                                    <img src="assets/img/kit/kendall.jpg" alt="Thumbnail Image" class="img-raised img-circle">
-                                    <h4 class="title">Kendall Jenner
-                                        <br />
-                                        <small class="text-muted">Model</small>
-                                    </h4>
-                                    <p>You can write here details about one of your team members. You can give more details
-                                        about what they do. Feel free to add some
-                                        <a href="#">links</a> for people to be able to follow them outside the site.</p>
-                                    <a href="#pablo" class="btn btn-simple btn-just-icon">
-                                        <i class="fa fa-google-plus"></i>
-                                    </a>
-                                    <a href="#pablo" class="btn btn-simple btn-just-icon">
-                                        <i class="fa fa-youtube-play"></i>
-                                    </a>
-                                    <a href="#pablo" class="btn btn-simple btn-just-icon btn-default">
-                                        <i class="fa fa-twitter"></i>
                                     </a>
                                 </div>
                             </div>
@@ -215,10 +176,15 @@
 </template>
 <script>
 export default {
-  name: 'Landing',
+  name: "Landing",
   data () {
     return {
-      msg: 'Welcome to GCILab'
+      msg: "Welcome to GCILab",
+      members: [
+        { id: 1, name: "Moshi", ext: "Joob", isActive: true, img: require("../assets/img/kit/kendall.jpg") },
+        { id: 2, name: "Shino", ext: "Joob", isActive: true, img: require("../assets/img/kit/avatar.jpg") },
+        { id: 3, name: "Momo", ext: "Joob", isActive: true, img: require("../assets/img/kit/christian.jpg") }
+      ]
     }
   }
 }
@@ -226,7 +192,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-b {
-  font-size: inherit;
+div.header.header-filter {
+    background-image: url('../assets/img/kit/city1.jpg');
 }
 </style>
