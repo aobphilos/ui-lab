@@ -2,7 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
-    <div>Inner face: <i class="material-icons">face</i></div>
+    <button type="button" class="btn btn-primary">Primary</button>
     <ul>
       <li>
         <a
