@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <div class="wrapper">
+      <section-nav/>
       <section-header/>
         <router-view/>
       <section-footer/>
@@ -9,11 +10,12 @@
 </template>
 
 <script>
+import SectionNav from '@/components/SectionNav'
 import SectionHeader from '@/components/SectionHeader'
 import SectionFooter from '@/components/SectionFooter'
 export default {
   name: 'App',
-  components: {SectionHeader, SectionFooter}
+  components: {SectionNav, SectionHeader, SectionFooter}
 }
 </script>
 
