@@ -1,26 +1,17 @@
 <template>
   <div id="app">
-    <div class="wrapper">
-      <section-nav/>
-      <section-header/>
-        <router-view/>
-      <section-footer/>
-    </div>
+    <section-header/>
+    <router-view/>
+    <section-footer/>
   </div>
 </template>
 
 <script>
-import SectionNav from '@/components/SectionNav'
 import SectionHeader from '@/components/SectionHeader'
 import SectionFooter from '@/components/SectionFooter'
+import ItemSlider from '@/components/ItemSlider'
 export default {
   name: 'App',
-  components: {SectionNav, SectionHeader, SectionFooter}
+  components: { SectionHeader, SectionFooter, ItemSlider }
 }
 </script>
-
-<style scoped>
-div.wrapper {
-    background-image: url('./assets/img/bg-main.jpg');
-}
-</style>

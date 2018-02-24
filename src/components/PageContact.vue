@@ -1,101 +1,93 @@
 <template>
-    <div class="main main-raised">
-        <div class="container">
-            <div class="section text-center section-landing">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <h2 class="title">Contact Page</h2>
-                        <h5 class="description">This is the paragraph where you can write more details about your product. Keep you user engaged
-                            by providing meaningful information. Remember that by this time, the user is curious, otherwise
-                            he wouldn't scroll to get here. Add a button if you want the user to see more.</h5>
-                    </div>
-                </div>
-
-                <div class="features">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="info">
-                                <div class="icon icon-primary">
-                                    <i class="material-icons">chat</i>
-                                </div>
-                                <h4 class="info-title">First Feature</h4>
-                                <p>Divide details about your product or agency work into parts. Write a few lines about
-                                    each one. A paragraph describing a feature will be enough.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="info">
-                                <div class="icon icon-success">
-                                    <i class="material-icons">verified_user</i>
-                                </div>
-                                <h4 class="info-title">Second Feature</h4>
-                                <p>Divide details about your product or agency work into parts. Write a few lines about
-                                    each one. A paragraph describing a feature will be enough.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="info">
-                                <div class="icon icon-danger">
-                                    <i class="material-icons">fingerprint</i>
-                                </div>
-                                <h4 class="info-title">Third Feature</h4>
-                                <p>Divide details about your product or agency work into parts. Write a few lines about
-                                    each one. A paragraph describing a feature will be enough.</p>
-                            </div>
-                        </div>
-                    </div>
+    <div>
+        <!--  Loader -->
+        <div id="loader"></div>
+        <!--  Loader End -->
+        <!-- Contact us heading-->
+        <section id="contact_header">
+            <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                <h4 class="h4-type3">CONTACT</h4>
+                <div class="border-bar4 margin-t20 "></div>
                 </div>
             </div>
-
-            <div class="section text-center">
-                <h2 class="title">Here is our team</h2>
-
-                <div class="team">
-                    <div class="row" v-for="member in members" :key="member.id">
-                        <div class="col-md-4">
-                            <div class="team-player">
-                                <img :src="member.img" alt="Thumbnail Image" class="img-raised img-circle">
-                                <h4 class="title">{{member.name}} {{member.ext}}
-                                    <br />
-                                    <small class="text-muted">Model</small>
-                                </h4>
-                                <p class="description">You can write here details about one of your team members. You can give more details
-                                    about what they do. Feel free to add some
-                                    <a href="#">links</a> for people to be able to follow them outside the site.</p>
-                                <a href="#pablo" class="btn btn-simple btn-just-icon">
-                                    <i class="fa fa-twitter"></i>
-                                </a>
-                                <a href="#pablo" class="btn btn-simple btn-just-icon">
-                                    <i class="fa fa-instagram"></i>
-                                </a>
-                                <a href="#pablo" class="btn btn-simple btn-just-icon btn-default">
-                                    <i class="fa fa-facebook-square"></i>
-                                </a>
-                            </div>
-                        </div>
+            </div>
+        </section>
+        <!-- Contact us heading end-->
+        <!-- enquiry form -->
+        <section id="contact_form">
+            <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12 get_in_touch_form">
+                <h3>Get In Touch</h3>
+                <p>Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
+                    nibh.
+                </p>
+                <form action="contact.html" method="post" name="contct_form">
+                    <input type="text" name="fullname" placeholder="Your Name" class="input_text">
+                    <input type="email" name="email" placeholder="Your Email" class="input_text">
+                    <input type="text" name="mobile" placeholder="Your Mobile No." class="input_text">
+                    <textarea name="message" placeholder="Your Message" class="input_textarea"></textarea>
+                    <input type="submit" name="submit" value="SEND" class="input_submit">
+                </form>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12 margin-t30">
+                <div class="col-md-12 col-sm-12 col-xs-12 contact_detail">
+                    <div class=" col-md-3 col-xs-12 text-center ">
+                        <span class="icon ti-location-pin"></span>
                     </div>
+                    <p class="col-md-9 col-xs-12">164/9 Orchard St,New York, NY 10002, United States.</p>
                 </div>
 
+                <div class="col-md-12 col-sm-12 col-xs-12 contact_detail">
+                    <div class=" col-md-3 col-xs-12 text-center">
+                        <span  class="icon ti-email"></span>
+                    </div>
+                    <p class="col-md-9 col-xs-12">contact@buzline.com</p>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12 contact_detail">
+                    <div class=" col-md-3 col-xs-12 text-center">
+                        <span class="icon ti-headphone"></span>
+                    </div>
+                    <p class="col-md-9 col-xs-12">+1 6485 658956</p>
+                </div>
+                </div>
             </div>
-        </div>
+            </div>
+        </section>
+
+        <!-- enquiry form end -->
+
+        <!-- google map -->
+        <section id="googlemap">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242.24518580092612!2d100.51996847439027!3d13.723113154212902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e298d2d351f5d1%3A0xc18202ec7d5a3d1e!2sJewelry+Trade+Center+Thailand!5e0!3m2!1sen!2sth!4v1519454169213"
+            height="400"  style="border:0" allowfullscreen class="map-frame"></iframe>
+        </section>
+        <!-- google map end -->
     </div>
 </template>
 <script>
+import $ from 'jquery'
 export default {
   name: 'PageContact',
   data () {
     return {
-      msg: 'Welcome to GCILab',
-      members: [
-        { id: 1, name: 'Moshi', ext: 'Joob', isActive: true, img: require('../assets/img/ori/gems01.jpg') },
-        { id: 2, name: 'Shino', ext: 'Joob', isActive: true, img: require('../assets/img/ori/gems02.jpg') },
-        { id: 3, name: 'Momo', ext: 'Joob', isActive: true, img: require('../assets/img/ori/gems03.jpg') }
-      ]
+      msg: 'Welcome to GCILab'
     }
+  },
+  mounted: () => {
+    $('#loader').fadeOut(500)
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+#contact_header {
+    height: 300px;
+    background-image: url(../assets/img/portfolio/contact.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 </style>
