@@ -30,7 +30,7 @@ module.exports = {
     "$": true,
     "jQuery": true,
     "bootstrap": true,
-    "wow": true,
+    "WOW": true,
     "$.fn.flexslider": true,
     "$.fn.easing": true,
     "SmoothScroll": true,

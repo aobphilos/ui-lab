@@ -26,5 +26,4 @@
     'wrapAround': true
   })
 
-  
 })(jQuery)
