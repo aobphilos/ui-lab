@@ -51,8 +51,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 #about_header {
-    height: 300px;
-    background-image: url(../assets/img/portfolio/aboutus.jpg);
+    height: 265px;
+    background-image: url(../assets/img/cover/default.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }

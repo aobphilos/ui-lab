@@ -20,10 +20,7 @@
             <div class="container">
             <div class="row">
                 <div class="col-md-6 col-sm-6 col-xs-12 get_in_touch_form">
-                <h3>Get In Touch</h3>
-                <p>Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
-                    nibh.
-                </p>
+                <p>Please use this form to submit your comments, questions or information requests. If your subject is not covered or you have a specific enquiry, use any of the alternative ways to contact listed below.</p>
                 <form action="/contact" method="post" name="contct_form">
                     <input type="text" name="fullname" placeholder="Your Name" class="input_text">
                     <input type="email" name="email" placeholder="Your Email" class="input_text">
@@ -82,8 +79,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 #contact_header {
-    height: 300px;
-    background-image: url(../assets/img/portfolio/contact.jpg);
+    height: 265px;
+    background-image: url(../assets/img/cover/default.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }

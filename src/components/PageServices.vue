@@ -8,7 +8,7 @@
             <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
-                <h4 class="h4-type3">SERVICES</h4>
+                <h4 class="h4-type3">GCI LAB SERVICES</h4>
                 <div class="border-bar4 margin-t20 "></div>
                 </div>
             </div>
@@ -207,8 +207,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 #services_header {
-  height: 300px;
-  background-image: url(../assets/img/portfolio/services.jpg);
+  height: 265px;
+  background-image: url(../assets/img/cover/default.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }

@@ -15,44 +15,24 @@
         </div>
     </section>
     <!-- Verified heading end-->
-    <!-- Verified -->
-    <section id="verified" class="padding-tb50">
+    <!-- what we do  -->
+    <section id="verified" class="padding-tb100">
         <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-            <div class="clients">
-                <ul class="slides text-center">
-                <li>
-                    <img src="../assets/img/brands/1.png" alt="">
-                </li>
-                <li>
-                    <img src="../assets/img/brands/2.png" alt="">
-                </li>
-                <li>
-                    <img src="../assets/img/brands/3.png" alt="">
-                </li>
-                <li>
-                    <img src="../assets/img/brands/4.png" alt="">
-                </li>
-                <li>
-                    <img src="../assets/img/brands/1.png" alt="">
-                </li>
-                <li>
-                    <img src="../assets/img/brands/2.png" alt="">
-                </li>
-                <li>
-                    <img src="../assets/img/brands/3.png" alt="">
-                </li>
-                <li>
-                    <img src="../assets/img/brands/4.png" alt="">
-                </li>
-                </ul>
-            </div>
-            </div>
-        </div>
+            <form action="#/verified">
+                <div class="row">
+                    <div class="col-md-5">
+                            <div class="form-group">
+                                <label for="verifiedId">Please use this form to search your verified report</label><br><br>
+                                <input type="text" class="form-control" name="verifiedId" placeholder="Enter Rreport Id" >
+                            </div>
+                            <button type="submit" class="btn btn-primary">Search</button>
+                        <p class="p-type-3 color-grey margin-t20"></p>
+                    </div>
+                </div>
+            </form>
         </div>
     </section>
-    <!-- clients end -->
+    <!-- what we do  end-->
 </div>
 </template>
 <script>
@@ -70,9 +50,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 #verified_header {
-    height: 300px;
-    background-image: url(../assets/img/portfolio/portfolio.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+  height: 265px;
+  background-image: url(../assets/img/cover/default.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 </style>

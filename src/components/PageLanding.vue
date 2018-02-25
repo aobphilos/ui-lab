@@ -19,7 +19,7 @@
                         <h4 class="h4-type2 margin-t10">GEMS &amp; GEMOLOGY CONSULTANT</h4>
                         <div class="border-bar margin-t20 "></div>
                         <p class="p-type-5 color-grey margin-t20">by experienced graduate gemologist (G.G.) instructor from GIA</p>
-                        <router-link to="services" rel="tooltip" title="Services" class="btn login-btn" >READ MORE</router-link>
+                        <router-link to="services" rel="tooltip" title="READ MORE" class="btn login-btn" >READ MORE</router-link>
                     </div>
                     <div class="col-md-6 col-xs-12 parallax-window" data-parallax="scroll" data-image-src="../assets/img/whoweare.jpg" data-speed="0.4">
                     </div>
@@ -37,7 +37,7 @@
                         <h4 class="h4-type2 margin-t10">VERIFIED REPORT</h4>
                         <div class="border-bar margin-t20 "></div>
                         <p class="p-type-5 color-grey margin-t20">If you are looking for certified gems, we would be honored to provide.</p>
-                        <router-link to="services" rel="tooltip" title="Services" class="btn login-btn" >MORE COLLECTION</router-link>
+                        <router-link to="verified" rel="tooltip" title="MORE COLLECTION" class="btn login-btn" >MORE COLLECTION</router-link>
                     </div>
                 </div>
             </div>
