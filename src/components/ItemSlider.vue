@@ -1,7 +1,7 @@
 <template>
     <!-- flexslider  -->
     <section id="slider">
-        <div class="flexslider flexslide-container">
+        <div class="flexslider flexslide-container" v-flex-slider>
             <ul class="slides">
                 <li class="bg-img-1">
                     <div class="flex-caption fadeInUp animated container">
@@ -45,7 +45,8 @@
 
 <script>
 export default {
-  name: 'ItemSlider'
+  name: 'ItemSlider',
+  mounted: () => {}
 }
 </script>
 

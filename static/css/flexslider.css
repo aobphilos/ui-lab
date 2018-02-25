@@ -116,7 +116,7 @@ html[xmlns] .flexslider .slides {
     background-position: 0px 0px;
     cursor: pointer;
     background-size: 80px 40px;
-    background-image: url(../img/flex-nav.png);
+    background-image: url('../img/flex-nav.png');
     background-repeat: no-repeat;
     text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
     -webkit-transition: all 0.3s ease-in-out;

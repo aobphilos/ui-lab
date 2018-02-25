@@ -1,7 +1,7 @@
 <template>
 <div>
     <!--  Loader -->
-    <div id="loader"></div>
+    <div id="loader" v-fade-out></div>
     <!--  Loader End -->
     <!-- Verified heading-->
     <section id="verified_header">
@@ -56,7 +56,6 @@
 </div>
 </template>
 <script>
-import $ from 'jquery'
 export default {
   name: 'PageVerified',
   data () {
@@ -64,9 +63,7 @@ export default {
       msg: 'Welcome to GCILab'
     }
   },
-  mounted: () => {
-    $('#loader').fadeOut(500)
-  }
+  mounted: () => {}
 }
 </script>
 

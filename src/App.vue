@@ -9,9 +9,8 @@
 <script>
 import SectionHeader from '@/components/SectionHeader'
 import SectionFooter from '@/components/SectionFooter'
-import ItemSlider from '@/components/ItemSlider'
 export default {
   name: 'App',
-  components: { SectionHeader, SectionFooter, ItemSlider }
+  components: { SectionHeader, SectionFooter }
 }
 </script>

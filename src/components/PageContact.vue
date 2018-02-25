@@ -1,7 +1,7 @@
 <template>
     <div>
         <!--  Loader -->
-        <div id="loader"></div>
+        <div id="loader" v-fade-out></div>
         <!--  Loader End -->
         <!-- Contact us heading-->
         <section id="contact_header">
@@ -24,7 +24,7 @@
                 <p>Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
                     nibh.
                 </p>
-                <form action="contact.html" method="post" name="contct_form">
+                <form action="/contact" method="post" name="contct_form">
                     <input type="text" name="fullname" placeholder="Your Name" class="input_text">
                     <input type="email" name="email" placeholder="Your Email" class="input_text">
                     <input type="text" name="mobile" placeholder="Your Mobile No." class="input_text">
@@ -68,7 +68,6 @@
     </div>
 </template>
 <script>
-import $ from 'jquery'
 export default {
   name: 'PageContact',
   data () {
@@ -76,9 +75,7 @@ export default {
       msg: 'Welcome to GCILab'
     }
   },
-  mounted: () => {
-    $('#loader').fadeOut(500)
-  }
+  mounted: () => {}
 }
 </script>
 

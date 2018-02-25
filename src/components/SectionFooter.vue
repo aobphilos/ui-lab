@@ -70,6 +70,7 @@
 </template>
 <script>
 export default {
-  name: 'SectionFooter'
+  name: 'SectionFooter',
+  mounted: () => {}
 }
 </script>

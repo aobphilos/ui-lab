@@ -1,7 +1,7 @@
 <template>
     <div>
         <!--  Loader -->
-        <div id="loader">
+        <div id="loader" v-fade-out>
             <div class="wrapper">
                 <div class="cssload-loader"></div>
             </div>
@@ -82,7 +82,6 @@
     </div>
 </template>
 <script>
-import $ from 'jquery'
 import ItemSlider from '@/components/ItemSlider'
 export default {
   name: 'PageLanding',
@@ -92,9 +91,7 @@ export default {
       msg: 'Welcome to GCILab'
     }
   },
-  mounted: () => {
-    $('#loader').fadeOut(500)
-  }
+  mounted: () => {}
 }
 </script>
 

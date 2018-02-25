@@ -1,7 +1,7 @@
 <template>
     <div>
         <!--  Loader -->
-        <div id="loader"></div>
+        <div id="loader" v-fade-out></div>
         <!--  Loader End -->
 
         <!-- About us heading-->
@@ -37,7 +37,6 @@
     </div>
 </template>
 <script>
-import $ from 'jquery'
 export default {
   name: 'PageAbout',
   data () {
@@ -45,9 +44,7 @@ export default {
       msg: 'Welcome to GCILab'
     }
   },
-  mounted: () => {
-    $('#loader').fadeOut(500)
-  }
+  mounted: () => {}
 }
 </script>
 
