@@ -3,7 +3,7 @@
         <!--  Loader -->
         <div id="loader" v-fade-out></div>
         <!--  Loader End -->
-        <!-- About us heading-->
+        <!-- Services heading-->
         <section id="services_header">
             <div class="container">
             <div class="row">
@@ -14,155 +14,42 @@
             </div>
             </div>
         </section>
-        <!-- About us heading end-->
-        <!-- services -->
-        <section id="services" class="padding-tb100 bg-grey">
+        <!-- Services heading end-->
+        <!-- Services -->
+        <section id="services" class="padding-tb100">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-4 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 text-left margin-tb10">
-                        <div class="col-md-3 col-xs-3 col-sm-3">
-                            <span class="ti-star icon-type2"></span>
-                        </div>
-                        <div class="col-md-9 col-xs-9 col-sm-9">
-                            <h4 class="h4-type1 margin-t10">Creative Design</h4>
-                            <p class="p-type-4 color-grey margin-t10">Lorem ipsum dolor sit amet, consect etur adipis icing elit. Volupt atum ut alias ullam tempore nobis aspe.
-                            </p>
-                        </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 class="h4-type1">1. CONSULTANCY REPORT - <u>350 BAHT</u> / STONE</h4>
+                    <div class="col-md-6">
+                        <p class="p-type-3 color-grey margin-t20">One report can be contained more than 1 stones details with additional fee of 100 baht per stone.
+                        </p>
+                        <p>For example:</p>
+                        <p>1 report for a pair of rubies - the total fee is 450 baht</p>
+                        <p>(350 + 100)</p>
                     </div>
-                    <div class="col-md-4 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 text-left margin-tb10">
-                        <div class="col-md-3 col-xs-3 col-sm-3">
-                            <span class="ti-settings icon-type2"></span>
-                        </div>
-                        <div class="col-md-9 col-xs-9 col-sm-9">
-                            <h4 class="h4-type1 margin-t10">Well Documented</h4>
-                            <p class="p-type-4 color-grey margin-t10">Lorem ipsum dolor sit amet, consect etur adipis icing elit. Volupt atum ut alias ullam tempore nobis aspe.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 text-left margin-tb10">
-                        <div class="col-md-3 col-xs-3 col-sm-3">
-                            <span class="ti-medall icon-type2"></span>
-                        </div>
-                        <div class="col-md-9 col-xs-9 col-sm-9">
-                            <h4 class="h4-type1 margin-t10">Responsive Design</h4>
-                            <p class="p-type-4 color-grey margin-t10">Lorem ipsum dolor sit amet, consect etur adipis icing elit. Volupt atum ut alias ullam tempore nobis aspe.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 text-left margin-tb10">
-                        <div class="col-md-3 col-xs-3 col-sm-3">
-                            <span class="ti-announcement icon-type2"></span>
-                        </div>
-                        <div class="col-md-9 col-xs-9 col-sm-9">
-                            <h4 class="h4-type1 margin-t10">SEO Friendly</h4>
-                            <p class="p-type-4 color-grey margin-t10">Lorem ipsum dolor sit amet, consect etur adipis icing elit. Volupt atum ut alias ullam tempore nobis aspe.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 text-left margin-tb10">
-                        <div class="col-md-3 col-xs-3 col-sm-3">
-                            <span class="ti-location-pin icon-type2"></span>
-                        </div>
-                        <div class="col-md-9 col-xs-9 col-sm-9">
-                            <h4 class="h4-type1 margin-t10">Easy Customization</h4>
-                            <p class="p-type-4 color-grey margin-t10">Lorem ipsum dolor sit amet, consect etur adipis icing elit. Volupt atum ut alias ullam tempore nobis aspe.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 text-left margin-tb10">
-                        <div class="col-md-3 col-xs-3 col-sm-3">
-                            <span class="ti-filter icon-type2"></span>
-                        </div>
-                        <div class="col-md-9 col-xs-9 col-sm-9">
-                            <h4 class="h4-type1 margin-t10">Clean and Modern</h4>
-                            <p class="p-type-4 color-grey margin-t10">Lorem ipsum dolor sit amet, consect etur adipis icing elit. Volupt atum ut alias ullam tempore nobis aspe.
-                            </p>
-                        </div>
+                </div>
+                <div class="padding-tb50">&nbsp;</div>
+                <div class="col-md-12 ">
+                    <h4 class="h4-type1">2. VERBAL GEMS TESTING - <u>100 BAHT</u> / STONE (WITH NO REPORT ISSUED)</h4>
+                </div>
+                <div class="padding-tb50">&nbsp;</div>
+                <div class="col-md-12">
+                    <h4 class="h4-type1">3. ON - SITE GEMOLOGICAL CONSULTANCY SERVICE - <u>3,000 BAHT</u> / HOUR</h4>
+                </div>
+                <div class="padding-tb50">&nbsp;</div>
+                <div class="col-md-12">
+                    <h4 class="h4-type1">ON-SITE GEMOLOGICAL CONSULTANTCY SERVICES:</h4>
+                    <div class="col-md-6">
+                        <p class="p-type-3 color-grey margin-t20">If requested, visits can be prearranged by our gemologists to business offices who require gemological advice.</p>
+                        <p class="p-type-3 color-grey margin-t20">With our gemologist's experience, it would be benefit for many jewelry companies or individuals. You don't need to hire a gemologist as fulltime, just when you have problem in some gems and want our gemologist to identify, or you need some gemological advice, i.e. pre-identify gems before sending them to well-known laboratories for the worth certificates.</p>
+                        <p class="p-type-3 color-grey margin-t20">In case of the jewelry business need the custom training program which suit for employees, gemological seminar for public or clients, i.e. 4Cs of diamond, Pearl grading, Birthstones, etc. Please <router-link to="contact" rel="tooltip" title="Contact">contact us</router-link> for more information.</p>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- services End -->
-        <!-- testimonial -->
-        <section id="testimonial" class="padding-tb100 parallax-testimonial" data-parallax="scroll" data-image-src="../assets/img/parallax-back.jpg" data-speed="0.4">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="testimonial">
-                            <ul class="slides text-center">
-                            <li>
-                                <p class="testimonial-text">Nulla nec nisi viverra, facilisis nisl in, pulvinar metus. Mauris sit amet ligula blandit, efficitur magna
-                                et, hendrerit nisi. Suspendisse dapibus venenatis nunc.</p>
-                                <div class="border-bar3"></div>
-                                <h5>John Doe</h5>
-                                <h6>CEO of Design Company</h6>
-                            </li>
-                            <li>
-                                <p class="testimonial-text">Nulla nec nisi viverra, facilisis nisl in, pulvinar metus. Mauris sit amet ligula blandit, efficitur magna
-                                et, hendrerit nisi. Suspendisse dapibus venenatis nunc.</p>
-                                <div class="border-bar3"></div>
-                                <h5>John Doe</h5>
-                                <h6>CEO of Design Company</h6>
-                            </li>
-                            <li>
-                                <p class="testimonial-text">Nulla nec nisi viverra, facilisis nisl in, pulvinar metus. Mauris sit amet ligula blandit, efficitur magna
-                                et, hendrerit nisi. Suspendisse dapibus venenatis nunc.</p>
-                                <div class="border-bar3"></div>
-                                <h5>John Doe</h5>
-                                <h6>CEO of Design Company</h6>
-                            </li>
-                            <li>
-                                <p class="testimonial-text">Nulla nec nisi viverra, facilisis nisl in, pulvinar metus. Mauris sit amet ligula blandit, efficitur magna
-                                et, hendrerit nisi. Suspendisse dapibus venenatis nunc.</p>
-                                <div class="border-bar3"></div>
-                                <h5>John Doe</h5>
-                                <h6>CEO of Design Company</h6>
-                            </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
-        <!-- testimonial end-->
-        <!-- clients -->
-        <section id="clients" class="padding-tb50">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="clients">
-                            <ul class="slides text-center">
-                                <li>
-                                <img src="../assets/img/brands/1.png" alt="">
-                                </li>
-                                <li>
-                                <img src="../assets/img/brands/2.png" alt="">
-                                </li>
-                                <li>
-                                <img src="../assets/img/brands/3.png" alt="">
-                                </li>
-                                <li>
-                                <img src="../assets/img/brands/4.png" alt="">
-                                </li>
-                                <li>
-                                <img src="../assets/img/brands/1.png" alt="">
-                                </li>
-                                <li>
-                                <img src="../assets/img/brands/2.png" alt="">
-                                </li>
-                                <li>
-                                <img src="../assets/img/brands/3.png" alt="">
-                                </li>
-                                <li>
-                                <img src="../assets/img/brands/4.png" alt="">
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- clients end -->
+        <!-- Services  end-->
     </div>
 </template>
 <script>
@@ -174,6 +61,7 @@ export default {
     }
   },
   mounted: () => {
+    $('.parallax-mirror').hide()
     /* ----------------------------------|| Flex Slider ||---------------------------------------------- */
 
     $('.testimonial').flexslider({

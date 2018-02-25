@@ -44,7 +44,7 @@ export default {
       msg: 'Welcome to GCILab'
     }
   },
-  mounted: () => {}
+  mounted: () => { $('.parallax-mirror').hide() }
 }
 </script>
 
