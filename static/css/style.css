@@ -240,6 +240,10 @@ body {
     margin-bottom: 10px;
 }
 
+.padding-tb25 {
+    padding: 25px 0;
+}
+
 .padding-tb50 {
     padding: 50px 0;
 }
@@ -575,6 +579,7 @@ body {
 
 #footer .footerlogo {
     width: 150px;
+    filter: grayscale(1);
 }
 
 #footer ul li a {

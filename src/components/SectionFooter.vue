@@ -5,10 +5,9 @@
         <div class="row">
           <div class="col-md-12 col-md-offset-0 col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1">
             <div class="col-md-4 padding-tb50">
-              <img src="../assets/img/footer-logo.png" class="footerlogo" alt="">
-              <p class="footer-info-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Volu ptaonsec tetur adiu ptaonsec tetur adipisicing
-                elit. Volu ptatu pis icing elit. Vditiis.</p>
-              <p class="copyright">&copy; 2018 GCILab.com</p>
+              <img src="../assets/img/nav-logo.png" class="footerlogo" alt="">
+              <p class="footer-info-text">&nbsp;</p>
+              <p class="copyright">&copy; 2018 GCILAB.COM</p>
             </div>
 
             <div class="col-md-2 padding-tb50">
@@ -55,10 +54,7 @@
                   <p>Tel. (66) 83 916 7158</p>
                 </div>
                 <div class="socialnlinks">
-                  <a href="#"><span class="ti-facebook"></span></a>
-                  <a href="#"><span class="ti-instagram"></span></a>
-                  <a href="#"><span class="ti-twitter"></span></a>
-                  <a href="#"><span class="ti-linkedin"></span></a>
+                  <a href="https://www.facebook.com/GCILAB/" target="_blank"><span class="ti-facebook"></span></a>
                 </div>
               </div>
             </div>

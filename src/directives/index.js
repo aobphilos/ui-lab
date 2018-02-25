@@ -9,7 +9,9 @@ var invokePlugins = () => {
   var plugins = () => {
     return [
       $,
-      $.fn.flexslider
+      $.fn.flexslider,
+      easing(),
+      parallax()
     ]
   }
   plugins.bind(this)

@@ -32,7 +32,7 @@ module.exports = {
     "bootstrap": true,
     "WOW": true,
     "$.fn.flexslider": true,
-    "$.fn.easing": true,
+    "easing": true,
     "SmoothScroll": true,
     "parallax": true,
     "lightbox" : true
