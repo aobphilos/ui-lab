@@ -25,5 +25,16 @@ module.exports = {
     'generator-star-spacing': 'off',
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+  },
+  globals: {
+    "$": true,
+    "jQuery": true,
+    "bootstrap": true,
+    "WOW": true,
+    "$.fn.flexslider": true,
+    "$.fn.easing": true,
+    "SmoothScroll": true,
+    "parallax": true,
+    "lightbox" : true
   }
 }
