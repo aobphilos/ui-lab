@@ -93,7 +93,8 @@ module.exports = {
     new webpack.ProvidePlugin({
       '$': 'jquery',
       'jQuery': 'jquery',
-      '$.fn.flexslider': '../../static/js/04.jquery.flexslider.exec'
+      '$.fn.flexslider': '../../static/js/04.jquery.flexslider.exec',
+      'lightbox': '../../static/js/08.lightbox.exec'
     })
   ]
 }
