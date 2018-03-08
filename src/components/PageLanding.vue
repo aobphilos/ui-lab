@@ -18,7 +18,7 @@
                     <div class="col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 padding-tb100">
                         <h4 class="h4-type2 margin-t10">GEMS &amp; GEMOLOGY CONSULTANT</h4>
                         <div class="border-bar margin-t20 "></div>
-                        <p class="p-type-5 color-grey margin-t20">by experienced graduate gemologist (G.G.) instructor from GIA</p>
+                        <p class="p-type-3 color-grey margin-t20">by experienced graduate gemologist (G.G.) instructor from GIA</p>
                         <router-link to="services" rel="tooltip" title="READ MORE" class="btn login-btn" >READ MORE</router-link>
                     </div>
                     <div class="col-md-6 col-xs-12 parallax-window" data-parallax="scroll" data-image-src="../assets/img/whoweare.jpg" data-speed="0.4">
@@ -27,22 +27,22 @@
             </div>
         </section>
         <!-- GEMOLOGY end-->
-        <!-- VERIFIED -->
+        <!-- VERIFY -->
         <section id="whoweare">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 col-xs-12 parallax-window" data-parallax="scroll" data-image-src="../assets/img/verified.jpg" data-speed="0.4">
+                    <div class="col-md-6 col-xs-12 parallax-window" data-parallax="scroll" data-image-src="../assets/img/verify.jpg" data-speed="0.4">
                     </div>
                     <div class="col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 padding-tb100">
-                        <h4 class="h4-type2 margin-t10">VERIFIED REPORT</h4>
+                        <h4 class="h4-type2 margin-t10">VERIFY REPORT</h4>
                         <div class="border-bar margin-t20 "></div>
-                        <p class="p-type-5 color-grey margin-t20">If you are looking for certified gems, we would be honored to provide.</p>
-                        <router-link to="verified" rel="tooltip" title="MORE COLLECTION" class="btn login-btn" >MORE COLLECTION</router-link>
+                        <p class="p-type-3 color-grey margin-t20">If you are looking for certified gems, we would be honored to provide.</p>
+                        <router-link to="verify" rel="tooltip" title="MORE COLLECTION" class="btn login-btn" >MORE COLLECTION</router-link>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- VERIFIED end-->
+        <!-- VERIFY end-->
         <!-- portfolio -->
         <section id="portfolio" class="padding-tb100">
             <div class="container">
@@ -120,7 +120,14 @@ export default {
       msg: 'Welcome to GCILab'
     }
   },
-  mounted: () => { $('.parallax-mirror').show() }
+  mounted: () => {
+    $('.parallax-mirror').show()
+    $('.parallax-window').parallax()
+  },
+  destroyed: () => {
+    $('.parallax-mirror').hide()
+    $('.parallax-window').parallax('destroy')
+  }
 }
 </script>
 

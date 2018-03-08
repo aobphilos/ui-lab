@@ -16,7 +16,7 @@
         </section>
         <!-- Contact us heading end-->
         <!-- enquiry form -->
-        <section id="contact_form">
+        <section id="contact_form" class="padding-tb50">
             <div class="container">
             <div class="row">
                 <div class="col-md-6 col-sm-6 col-xs-12 get_in_touch_form">
@@ -34,20 +34,17 @@
                     <div class=" col-md-3 col-xs-12 text-center ">
                         <span class="icon ti-location-pin"></span>
                     </div>
-                    <p class="col-md-9 col-xs-12">164/9 Orchard St,New York, NY 10002, United States.</p>
+                    <p class="col-md-9 col-xs-12">
+                        JEWELRY TRADE CENTER (SILOM GALLERIA)<br>
+                        341A/A, 3rd FLOOR, SILOM ROAD, BANGRAK, BANGKOK, THAILAND, 10500
+                    </p>
                 </div>
 
                 <div class="col-md-12 col-sm-12 col-xs-12 contact_detail">
                     <div class=" col-md-3 col-xs-12 text-center">
-                        <span  class="icon ti-email"></span>
-                    </div>
-                    <p class="col-md-9 col-xs-12">contact@buzline.com</p>
-                </div>
-                <div class="col-md-12 col-sm-12 col-xs-12 contact_detail">
-                    <div class=" col-md-3 col-xs-12 text-center">
                         <span class="icon ti-headphone"></span>
                     </div>
-                    <p class="col-md-9 col-xs-12">+1 6485 658956</p>
+                    <p class="col-md-9 col-xs-12">(66)83 916 7158, (66)2 630 0699</p>
                 </div>
                 </div>
             </div>
@@ -72,16 +69,18 @@ export default {
       msg: 'Welcome to GCILab'
     }
   },
-  mounted: () => { $('.parallax-mirror').hide() }
+  mounted: () => {
+    $('.parallax-mirror').hide()
+  }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 #contact_header {
-    height: 265px;
-    background-image: url(../assets/img/cover/default.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+  height: 265px;
+  background-image: url(../assets/img/cover/default.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 </style>

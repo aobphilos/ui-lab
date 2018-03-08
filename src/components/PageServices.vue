@@ -8,7 +8,7 @@
             <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
-                <h4 class="h4-type3">GCI LAB SERVICES</h4>
+                <h4 class="h4-type3">SERVICES</h4>
                 <div class="border-bar4 margin-t20 "></div>
                 </div>
             </div>
@@ -16,37 +16,39 @@
         </section>
         <!-- Services heading end-->
         <!-- Services -->
-        <section id="services" class="padding-tb100">
+        <section id="services" class="padding-tb50">
             <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h4 class="h4-type1">1. CONSULTANCY REPORT - <u>350 BAHT</u> / STONE</h4>
-                    <div class="col-md-6">
-                        <p class="p-type-3 color-grey margin-t20">One report can be contained more than 1 stones details with additional fee of 100 baht per stone.
-                        </p>
-                        <p>For example:</p>
-                        <p>1 report for a pair of rubies - the total fee is 450 baht</p>
-                        <p>(350 + 100)</p>
+                <div class="row">
+                    <div class="col-md-10">
+                        <h4 class="h4-type1">GEM IDENTIFICATION CONSULTANCY REPORT</h4>
+                        <div class="col-md-8">
+                            <p class="p-type-3 color-grey margin-t20">
+                                <ol>
+                                    <li>350 BAHT/STONE</li>
+                                    <li>300 BAHT/STONE</li>
+                                    <li>200 BAHT/STONE</li>
+                                </ol>
+                            </p>
+                            <p class="p-type-3 color-grey margin-t20">ONE REPORT CAN BE CONTAINED MULTIPLE STONES DETAILS WITH ADDITIONAL FEE OF 100 BAHT PER STONE.</p>
+                            <div class="example">
+                                <p class="p-type-2 color-grey margin-t20">FOR EXAMPLE:</p>
+                                <p class="p-type-2 color-grey margin-t20">ONE REPORT (NUMBER 1, 350 BAHT) FOR A PAIR OF RUBIES = THE TOTAL FEE IS 450 BAHT. (350 + 100)</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="padding-tb50">&nbsp;</div>
-                <div class="col-md-12 ">
-                    <h4 class="h4-type1">2. VERBAL GEMS TESTING - <u>100 BAHT</u> / STONE (WITH NO REPORT ISSUED)</h4>
-                </div>
-                <div class="padding-tb50">&nbsp;</div>
-                <div class="col-md-12">
-                    <h4 class="h4-type1">3. ON - SITE GEMOLOGICAL CONSULTANCY SERVICE - <u>3,000 BAHT</u> / HOUR</h4>
-                </div>
-                <div class="padding-tb50">&nbsp;</div>
-                <div class="col-md-12">
-                    <h4 class="h4-type1">ON-SITE GEMOLOGICAL CONSULTANTCY SERVICES:</h4>
-                    <div class="col-md-6">
-                        <p class="p-type-3 color-grey margin-t20">If requested, visits can be prearranged by our gemologists to business offices who require gemological advice.</p>
-                        <p class="p-type-3 color-grey margin-t20">With our gemologist's experience, it would be benefit for many jewelry companies or individuals. You don't need to hire a gemologist as fulltime, just when you have problem in some gems and want our gemologist to identify, or you need some gemological advice, i.e. pre-identify gems before sending them to well-known laboratories for the worth certificates.</p>
-                        <p class="p-type-3 color-grey margin-t20">In case of the jewelry business need the custom training program which suit for employees, gemological seminar for public or clients, i.e. 4Cs of diamond, Pearl grading, Birthstones, etc. Please <router-link to="contact" rel="tooltip" title="Contact">contact us</router-link> for more information.</p>
+                <div class="row">
+                <div class="col-md-10 margin-t50">
+                        <h4 class="h4-type1">VERBAL GEMS TESTING</h4>
+                        <div class="col-md-8">
+                            <p class="p-type-3 color-grey margin-t20">
+                                <ol>
+                                    <li>100 BAHT/STONE (WITH NO REPORT ISSUED)</li>
+                                </ol>
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
             </div>
         </section>
         <!-- Services  end-->

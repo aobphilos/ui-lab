@@ -22,7 +22,7 @@
                         <router-link to="services" class="nav-link" rel="tooltip" title="Services">Services</router-link>
                     </li>
                      <li>
-                        <router-link to="verified" class="nav-link" rel="tooltip" title="Verified">Verified Report</router-link>
+                        <router-link to="verify" class="nav-link" rel="tooltip" title="Verify">Verify Report</router-link>
                     </li>
                     <li>
                         <router-link to="contact" class="nav-link" rel="tooltip" title="Contact">Contact</router-link>
@@ -39,22 +39,27 @@
                 <div>
                   <span class="glyphicon glyphicon-map-marker"></span>
                   <p>
-                    Jewelry Trade Center (Silom Galleria), <br>
-                    341 A/A, 3rd floor, Silom Road,<br>
-                    Bangrak, Bangkok,<br>
-                    10500 Thailand
+                    JEWELRY TRADE CENTER (SILOM GALLERIA)<br>
+                    341A/A, 3rd FLOOR, SILOM ROAD, BANGRAK, BANGKOK, THAILAND, 10500
                   </p>
                 </div>
                 <div>
-                  <span class="glyphicon glyphicon-envelope"></span>
-                  <a href="mailto://info@gcilab.com">info@gcilab.com</a>
-                </div>
-                <div>
                   <span class="glyphicon glyphicon-earphone"></span>
-                  <p>Tel. (66) 83 916 7158</p>
+                  <p>(66)83 916 7158, (66)2 630 0699</p>
                 </div>
                 <div class="socialnlinks">
-                  <a href="https://www.facebook.com/GCILAB/" target="_blank"><span class="ti-facebook"></span></a>
+                  <div class="row">
+                  <div class="col-md-6">
+                    <span class="col-md-3">line: </span>
+                    <p class="col-md-9"><a href="http://line.me/ti/p/~gcilab" target="_blank">gcilab</a></p>
+                  </div>
+                  </div>
+                  <div class="row">
+                  <div class="col-md-6">
+                    <span class="col-md-3">wechat: </span>
+                    <p class="col-md-9"><a href="weixin://dl/chat?gcilab" target="_blank">gcilab</a></p>
+                  </div>
+                  </div>
                 </div>
               </div>
             </div>
