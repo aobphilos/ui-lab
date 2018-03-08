@@ -57,7 +57,7 @@
                   <div class="row">
                   <div class="col-md-6">
                     <span class="col-md-3">wechat: </span>
-                    <p class="col-md-9"><a href="weixin://dl/chat?gcilab" target="_blank">gcilab</a></p>
+                    <p class="col-md-9">gcilab</p>
                   </div>
                   </div>
                 </div>
