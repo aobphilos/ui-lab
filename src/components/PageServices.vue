@@ -16,36 +16,57 @@
         </section>
         <!-- Services heading end-->
         <!-- Services -->
-        <section id="services" class="padding-tb50">
+        <section id="services">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-10">
-                        <h4 class="h4-type1">GEM IDENTIFICATION CONSULTANCY REPORT</h4>
-                        <div class="col-md-8">
-                            <p class="p-type-3 color-grey margin-t20">
-                                <ol>
-                                    <li>350 BAHT/STONE</li>
-                                    <li>300 BAHT/STONE</li>
-                                    <li>200 BAHT/STONE</li>
-                                </ol>
-                            </p>
-                            <p class="p-type-3 color-grey margin-t20">ONE REPORT CAN BE CONTAINED MULTIPLE STONES DETAILS WITH ADDITIONAL FEE OF 100 BAHT PER STONE.</p>
-                            <div class="example">
-                                <p class="p-type-2 color-grey margin-t20">FOR EXAMPLE:</p>
-                                <p class="p-type-2 color-grey margin-t20">ONE REPORT (NUMBER 1, 350 BAHT) FOR A PAIR OF RUBIES = THE TOTAL FEE IS 450 BAHT. (350 + 100)</p>
+                    <div class="col-md-7 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+                        <div class="row padding-tb50">
+                            <div class="col-md-11">
+                                <h4 class="h4-type1">GEM IDENTIFICATION CONSULTANCY REPORT</h4>
+                                <div>
+                                    <p class="p-type-3 color-grey margin-t20">
+                                        <ol>
+                                            <li>350 BAHT/STONE</li>
+                                            <li>300 BAHT/STONE</li>
+                                            <li>200 BAHT/STONE</li>
+                                        </ol>
+                                    </p>
+                                    <p class="p-type-3 color-grey margin-t20">ONE REPORT CAN BE CONTAINED MULTIPLE STONES DETAILS WITH ADDITIONAL FEE OF 100 BAHT PER STONE.</p>
+                                    <div class="example">
+                                        <p class="p-type-3 color-grey margin-t20">FOR EXAMPLE:</p>
+                                        <p class="p-type-3 color-grey margin-t20">ONE REPORT (NUMBER 1, 350 BAHT) FOR A PAIR OF RUBIES = THE TOTAL FEE IS 450 BAHT. (350 + 100)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row padding-tb50">
+                            <div class="col-md-11">
+                                <h4 class="h4-type1">VERBAL GEMS TESTING</h4>
+                                <div>
+                                    <p class="p-type-3 color-grey margin-t20">
+                                        <ol>
+                                            <li>100 BAHT/STONE (WITH NO REPORT ISSUED)</li>
+                                        </ol>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                <div class="col-md-10 margin-t50">
-                        <h4 class="h4-type1">VERBAL GEMS TESTING</h4>
-                        <div class="col-md-8">
-                            <p class="p-type-3 color-grey margin-t20">
-                                <ol>
-                                    <li>100 BAHT/STONE (WITH NO REPORT ISSUED)</li>
-                                </ol>
-                            </p>
+                    <div class="col-md-5 col-xs-12">
+                        <div class="row padding-tb25">
+                            <a href="../static/img/services/service-1.jpg" data-lightbox="service-1-lightbox">
+                                <img src="../assets/img/services/service-1.jpg" alt="Services">
+                            </a>
+                        </div>
+                        <div class="row padding-tb25">
+                            <a href="../static/img/services/service-2.jpg" data-lightbox="service-2-lightbox">
+                                <img src="../assets/img/services/service-2.jpg" alt="Services">
+                            </a>
+                        </div>
+                        <div class="row padding-tb25">
+                            <a href="../static/img/services/service-3.jpg" data-lightbox="service-3-lightbox">
+                                <img src="../assets/img/services/service-3.jpg" alt="Services">
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -64,32 +85,6 @@ export default {
   },
   mounted: () => {
     $('.parallax-mirror').hide()
-    /* ----------------------------------|| Flex Slider ||---------------------------------------------- */
-
-    $('.testimonial').flexslider({
-      animation: 'slide',
-      animationLoop: false,
-      itemMargin: 5,
-      minItems: 1,
-      directionNav: false,
-      pauseOnAction: true,
-      slideshowSpeed: 3000,
-      animationSpeed: 800,
-      maxItems: 1
-    })
-
-    $('.clients').flexslider({
-      directionNav: false,
-      animation: 'slide',
-      animationLoop: true,
-      pauseOnAction: false,
-      itemWidth: 210,
-      itemMargin: 5,
-      minItems: 2,
-      maxItems: 4,
-      slideshowSpeed: 4000,
-      animationSpeed: 1500
-    })
   }
 }
 </script>

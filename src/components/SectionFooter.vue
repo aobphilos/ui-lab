@@ -47,19 +47,13 @@
                   <span class="glyphicon glyphicon-earphone"></span>
                   <p>(66)83 916 7158, (66)2 630 0699</p>
                 </div>
-                <div class="socialnlinks">
-                  <div class="row">
-                  <div class="col-md-6">
-                    <span class="col-md-3">line: </span>
-                    <p class="col-md-9"><a href="http://line.me/ti/p/~gcilab" target="_blank">gcilab</a></p>
-                  </div>
-                  </div>
-                  <div class="row">
-                  <div class="col-md-6">
-                    <span class="col-md-3">wechat: </span>
-                    <p class="col-md-9">gcilab</p>
-                  </div>
-                  </div>
+                <div>
+                  <span>line: </span>
+                  <p><a href="http://line.me/ti/p/~gcilab" target="_blank">gcilab</a></p>
+                </div>
+                <div>
+                  <span >wechat: </span>
+                  <p><a href="#" target="_self">gcilab</a></p>
                 </div>
               </div>
             </div>

@@ -436,6 +436,7 @@ body {
 #slider {
   width: 100%;
   height: 100vh;
+  background-color: black;
 }
 
 #slider img {
@@ -610,14 +611,21 @@ body {
   padding: 6px 0;
 }
 
-#footer .contact-details div p,
-#footer .contact-details div a {
+#footer .contact-details div p{
   display: block;  
   color: #c1c1c1;
   font-size: 14px;
   line-height: 1.6;
   font-weight: 600;
   padding: 0 0 0 30px;
+}
+
+#footer .contact-details div a {
+  color: #c1c1c1;
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 600;
+  padding: 0 0 0 10px;
 }
 
 #footer .contact-details div span {
@@ -845,9 +853,9 @@ body {
 
   #services ol {
     list-style: decimal;
-    padding: 0 0 0 25px;
+    padding: 0 0 0 35px;
   }
 
-  #services example {
-    padding: 0 0 0 25px;
+  #services .example {
+    padding: 0 0 0 20px;
   }

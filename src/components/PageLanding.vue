@@ -36,8 +36,8 @@
                     <div class="col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 padding-tb100">
                         <h4 class="h4-type2 margin-t10">VERIFY REPORT</h4>
                         <div class="border-bar margin-t20 "></div>
-                        <p class="p-type-3 color-grey margin-t20">If you are looking for certified gems, we would be honored to provide.</p>
-                        <router-link to="verify" rel="tooltip" title="MORE COLLECTION" class="btn login-btn" >MORE COLLECTION</router-link>
+                        <p class="p-type-3 color-grey margin-t20"></p>
+                        <router-link to="verify" rel="tooltip" title="MORE COLLECTION" class="btn login-btn" >CHECK</router-link>
                     </div>
                 </div>
             </div>
