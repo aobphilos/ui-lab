@@ -23,9 +23,9 @@
                     <div class="col-md-5">
                             <div class="form-group">
                                 <label for="verifyId">Please use this form to search your verify report</label><br><br>
-                                <input type="text" class="input_text" name="verifyId" placeholder="Enter Report ID" v-model="reportId" >
+                                <input type="text" class="input_text" name="verifyId" placeholder="Enter Report ID" v-model="reportId" v-bind:disabled="isLoading" >
                             </div>
-                            <input type="button" name="submit" value="Search" class="input_submit" @click.prevent="getReport">
+                            <button name="submit" class="input_submit" @click.prevent="getReport" v-bind:disabled="isLoading">Search <i class="glyphicon glyphicon-refresh" v-bind:class="{loader: isLoading}"></i></button>
                         <p class="p-type-3 color-grey margin-t20"></p>
                     </div>
                 </div>
@@ -40,25 +40,29 @@ export default {
   name: 'PageVerify',
   data: () => {
     return {
-      reportId: ''
+      reportId: '',
+      isLoading: false
     }
   },
   methods: {
     getReport: function () {
-      if (this.reportId.trim() === '') {
+      const vm = this
+      if (vm.reportId.trim() === '') {
         return
       }
+      vm.isLoading = true
       // id: 1803SNV0075
       let url = 'http://dreamxchange-001-site3.btempurl.com/api/certificates/download'
-      let data = {id: this.reportId}
-      let reportName = `${this.reportId}.pdf`
-      this.reportId = ''
+      let data = {id: vm.reportId}
+      let reportName = `${vm.reportId}.pdf`
       $.ajax({
         method: 'GET',
         url: url,
         data: data,
+        crossDomain: true,
         xhrFields: {
-          responseType: 'blob'
+          responseType: 'blob',
+          withCredentials: true
         }
       }).then((response) => {
         let a = document.createElement('a')
@@ -68,6 +72,10 @@ export default {
         a.click()
         window.URL.revokeObjectURL(url)
       })
+        .always(() => {
+          vm.isLoading = false
+          vm.reportId = ''
+        })
     }
   },
   mounted: () => {
@@ -83,5 +91,24 @@ export default {
   background-image: url(../assets/img/cover/default.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+.input_submit[disabled]{
+  filter: grayscale(1);
+}
+.loader {
+  border-radius: 50%;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 </style>
