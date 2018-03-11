@@ -5,7 +5,7 @@
         <div class="row">
           <div class="col-md-12 col-md-offset-0 col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1">
             <div class="col-md-4 padding-tb50">
-              <img src="../assets/img/nav-logo.png" class="footerlogo" alt="">
+              <img src="../assets/img/nav-logo-black.jpg" class="footerlogo" alt="">
               <p class="footer-info-text">&nbsp;</p>
               <p class="copyright">&copy; 2018 GCILAB.COM</p>
             </div>

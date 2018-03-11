@@ -369,8 +369,8 @@ body {
 }
 
 #navigation .main-nav-logo {
-  height: 40px;
-  margin: 20px 0;
+  height: 55px;
+  margin: 10px 0;
 }
 
 #navigation .main-nav li {
@@ -587,7 +587,7 @@ body {
 
 #footer .footerlogo {
   width: 150px;
-  filter: grayscale(1);
+  /* filter: grayscale(1); */
 }
 
 #footer ul li a {

@@ -23,9 +23,9 @@
                     <div class="col-md-5">
                             <div class="form-group">
                                 <label for="verifyId">Please use this form to search your verify report</label><br><br>
-                                <input type="text" class="input_text" name="verifyId" placeholder="Enter Rreport Id" >
+                                <input type="text" class="input_text" name="verifyId" placeholder="Enter Report ID" v-model="reportId" >
                             </div>
-                            <input type="submit" name="submit" value="Search" class="input_submit">
+                            <input type="button" name="submit" value="Search" class="input_submit" @click.prevent="getReport">
                         <p class="p-type-3 color-grey margin-t20"></p>
                     </div>
                 </div>
@@ -38,9 +38,31 @@
 <script>
 export default {
   name: 'PageVerify',
-  data () {
+  data: () => {
     return {
-      msg: 'Welcome to GCILab'
+      reportId: ''
+    }
+  },
+  methods: {
+    getReport: function () {
+      if (this.reportId.trim() === '') {
+        return
+      }
+      let url = 'http://dreamxchange-001-site3.btempurl.com/api/certificates/download'
+      // let data = {id: this.reportId}
+      let urlOpen = `${url}?id=${this.reportId}`
+      // let reportName = `report-${this.reportId}.pdf`
+      window.open(urlOpen, '_blank')
+      this.reportId = ''
+      //   $.ajax({
+      //     method: 'GET',
+      //     url: url,
+      //     data: data
+      //   }).then((response, status) => {
+
+      //     // FileSaver.saveAs(res1, reportName)
+      //     // download(res.blob(), reportName, 'application/pdf')
+      //   })
     }
   },
   mounted: () => { $('.parallax-mirror').hide() }

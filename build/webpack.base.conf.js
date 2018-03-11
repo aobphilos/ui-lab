@@ -96,7 +96,8 @@ module.exports = {
       '$.fn.flexslider': '../../static/js/04.jquery.flexslider.exec',
       'easing': '../../static/js/05.jquery.easing.exec',
       'parallax': '../../static/js/07.parallax.exec',
-      'lightbox': '../../static/js/08.lightbox.exec'
+      'lightbox': '../../static/js/08.lightbox.exec',
+      'FileSaver': 'file-saver'
     })
   ]
 }
