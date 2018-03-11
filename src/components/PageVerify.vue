@@ -48,24 +48,31 @@ export default {
       if (this.reportId.trim() === '') {
         return
       }
+      // id: 1803SNV0075
       let url = 'http://dreamxchange-001-site3.btempurl.com/api/certificates/download'
-      // let data = {id: this.reportId}
-      let urlOpen = `${url}?id=${this.reportId}`
-      // let reportName = `report-${this.reportId}.pdf`
-      window.open(urlOpen, '_blank')
+      let data = {id: this.reportId}
+      let reportName = `${this.reportId}.pdf`
       this.reportId = ''
-      //   $.ajax({
-      //     method: 'GET',
-      //     url: url,
-      //     data: data
-      //   }).then((response, status) => {
-
-      //     // FileSaver.saveAs(res1, reportName)
-      //     // download(res.blob(), reportName, 'application/pdf')
-      //   })
+      $.ajax({
+        method: 'GET',
+        url: url,
+        data: data,
+        xhrFields: {
+          responseType: 'blob'
+        }
+      }).then((response) => {
+        let a = document.createElement('a')
+        let url = window.URL.createObjectURL(response)
+        a.href = url
+        a.download = reportName
+        a.click()
+        window.URL.revokeObjectURL(url)
+      })
     }
   },
-  mounted: () => { $('.parallax-mirror').hide() }
+  mounted: () => {
+    $('.parallax-mirror').hide()
+  }
 }
 </script>
 
