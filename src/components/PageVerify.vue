@@ -24,9 +24,10 @@
                             <div class="form-group">
                                 <label for="verifyId">Please use this form to search your verify report</label><br><br>
                                 <input type="text" class="input_text" name="verifyId" placeholder="Enter Report ID" v-model="reportId" v-bind:disabled="isLoading" >
+
                             </div>
                             <button name="submit" class="input_submit" @click.prevent="getReport" v-bind:disabled="isLoading">Search <i class="glyphicon glyphicon-refresh" v-bind:class="{loader: isLoading}"></i></button>
-                        <p class="p-type-3 color-grey margin-t20"></p>
+                        <p class="p-type-3 color-grey margin-t20"><span class="error" v-show="hasError">** Invalid Report Id **</span></p>
                     </div>
                 </div>
             </form>
@@ -41,21 +42,26 @@ export default {
   data: () => {
     return {
       reportId: '',
-      isLoading: false
+      isLoading: false,
+      hasError: false
     }
   },
   methods: {
-    getReport: function () {
-      const vm = this
-      if (vm.reportId.trim() === '') {
-        return
-      }
-      vm.isLoading = true
+    renderDocument: function (content, reportName) {
+      let a = document.createElement('a')
+      let url = window.URL.createObjectURL(content)
+      a.href = url
+      a.download = reportName
+      a.click()
+      window.URL.revokeObjectURL(url)
+    },
+
+    getReportServer: function () {
       // id: 1803SNV0075
-      let url = 'http://dreamxchange-001-site3.btempurl.com/api/certificates/download'
-      let data = {id: vm.reportId}
-      let reportName = `${vm.reportId}.pdf`
-      $.ajax({
+      let url =
+        'http://dreamxchange-001-site3.btempurl.com/api/certificates/download'
+      let data = { id: this.reportId }
+      return $.ajax({
         method: 'GET',
         url: url,
         data: data,
@@ -64,14 +70,57 @@ export default {
           responseType: 'blob',
           withCredentials: true
         }
-      }).then((response) => {
-        let a = document.createElement('a')
-        let url = window.URL.createObjectURL(response)
-        a.href = url
-        a.download = reportName
-        a.click()
-        window.URL.revokeObjectURL(url)
       })
+    },
+
+    getReportLocal: function () {
+      // id: 1803CDR9999
+      let url = `/certificates/${this.reportId}.pdf`
+      return $.ajax({
+        method: 'GET',
+        url: url
+      })
+    },
+
+    getReport: function () {
+      const vm = this
+
+      if (vm.reportId.trim() === '') {
+        return
+      }
+
+      vm.hasError = false
+      vm.isLoading = true
+
+      let reportName = `${vm.reportId}.pdf`
+
+      vm
+        .getReportLocal()
+        .then((contentLocal, status, response) => {
+          let reg = /^text\/html/
+          if (reg.test(response.getResponseHeader('content-type'))) {
+            vm
+              .getReportServer()
+              .then(contentServer => {
+                vm.renderDocument(contentServer, reportName)
+              })
+              .fail(() => {
+                vm.hasError = true
+              })
+          } else {
+            vm.renderDocument(contentLocal, reportName)
+          }
+        })
+        .fail(() => {
+          vm
+            .getReportServer()
+            .then(contentServer => {
+              vm.renderDocument(contentServer, reportName)
+            })
+            .fail(() => {
+              vm.hasError = true
+            })
+        })
         .always(() => {
           vm.isLoading = false
           vm.reportId = ''
@@ -92,7 +141,7 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.input_submit[disabled]{
+.input_submit[disabled] {
   filter: grayscale(1);
 }
 .loader {
@@ -100,15 +149,28 @@ export default {
   -webkit-animation: spin 2s linear infinite; /* Safari */
   animation: spin 2s linear infinite;
 }
-
+.error {
+  font-style: italic;
+  color: red;
+  font-weight: 400;
+  font-size: 15px;
+}
 /* Safari */
 @-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 </style>
