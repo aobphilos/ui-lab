@@ -48,12 +48,22 @@ export default {
   },
   methods: {
     renderDocument: function (content, reportName) {
-      let a = document.createElement('a')
-      let url = window.URL.createObjectURL(content)
-      a.href = url
-      a.download = reportName
-      a.click()
-      window.URL.revokeObjectURL(url)
+      // IE doesn't allow using a blob object directly as link href
+      // instead it is necessary to use msSaveOrOpenBlob
+      if (window.navigator && window.navigator.msSaveOrOpenBlob) {
+        window.navigator.msSaveOrOpenBlob(content, reportName)
+      } else {
+        let a = document.createElement('a')
+        let url = window.URL.createObjectURL(content)
+        a.href = url
+        a.download = reportName
+        a.click()
+        console.log(a)
+        window.URL.revokeObjectURL(url)
+      }
+      return $.Deferred()
+        .resolve()
+        .promise()
     },
 
     getReportServer: function () {
@@ -75,10 +85,15 @@ export default {
 
     getReportLocal: function () {
       // id: 1803CDR9999
+      // let url = `/static/content/${this.reportId}.pdf`
       let url = `/certificates/${this.reportId}.pdf`
       return $.ajax({
         method: 'GET',
-        url: url
+        url: url,
+        xhrFields: {
+          responseType: 'blob',
+          withCredentials: true
+        }
       })
     },
 
@@ -94,32 +109,28 @@ export default {
 
       let reportName = `${vm.reportId}.pdf`
 
-      vm
-        .getReportLocal()
+      $.when(vm.getReportLocal())
         .then((contentLocal, status, response) => {
-          let reg = /^text\/html/
-          if (reg.test(response.getResponseHeader('content-type'))) {
-            vm
-              .getReportServer()
-              .then(contentServer => {
-                vm.renderDocument(contentServer, reportName)
-              })
-              .fail(() => {
-                vm.hasError = true
-              })
+          let reg = /^application\/pdf/
+          let isFound = reg.test(response.getResponseHeader('content-type'))
+          return $.Deferred().resolve(isFound, contentLocal).promise()
+        })
+        .then((isFound, pdf) => {
+          if (isFound) {
+            return $.Deferred().resolve(pdf).promise()
           } else {
-            vm.renderDocument(contentLocal, reportName)
+            return vm.getReportServer()
           }
         })
+        .then((pdf) => {
+          vm.renderDocument(pdf, reportName)
+        })
+        .always(() => {
+          vm.isLoading = false
+          vm.reportId = ''
+        })
         .fail(() => {
-          vm
-            .getReportServer()
-            .then(contentServer => {
-              vm.renderDocument(contentServer, reportName)
-            })
-            .fail(() => {
-              vm.hasError = true
-            })
+          vm.hasError = true
         })
         .always(() => {
           vm.isLoading = false
