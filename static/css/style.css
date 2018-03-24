@@ -780,14 +780,15 @@ body {
 #contact_form .contact_detail {
   margin-bottom: 10px;
   border-bottom: 1px solid rgba(221, 221, 221, 0.29);
+  text-transform: uppercase;
 }
 
 #contact_form .contact_detail span.icon {
   display: inline-block;
   background-color: #fff;
-  font-size: 50px;
+  font-size: 46px;
   text-align: center;
-  padding: 20px;
+  padding: 12px;
   border: 2px solid #dea700;
   border-radius: 100%;
   color: #ebb103;
@@ -795,12 +796,16 @@ body {
 }
 
 #contact_form .contact_detail p {
-  font-size: 18px;
+  font-size: 16px;
   color: #424242;
   margin: 10px 0;
   line-height: 1.6;
-  padding: 16px;
-  text-align: center;
+  padding: 8px;
+  text-align: left;
+}
+
+#contact_form .contact_detail img {
+  max-width: unset;
 }
 
 #googlemap {

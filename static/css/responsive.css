@@ -49,7 +49,7 @@ sm layout and below
         padding-bottom: 50px;
     }
     #navigation .main-nav li {
-        display: block;
+        display: inline-block;
         width: 100%;
     }
     #navigation .login-btn {

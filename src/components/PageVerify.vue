@@ -51,6 +51,7 @@ export default {
       // IE doesn't allow using a blob object directly as link href
       // instead it is necessary to use msSaveOrOpenBlob
       if (window.navigator && window.navigator.msSaveOrOpenBlob) {
+        console.log('render by open blob')
         window.navigator.msSaveOrOpenBlob(content, reportName)
       } else {
         let a = document.createElement('a')
@@ -58,8 +59,8 @@ export default {
         a.href = url
         a.download = reportName
         a.click()
-        console.log(a)
         window.URL.revokeObjectURL(url)
+        console.log('render by revoke object')
       }
       return $.Deferred()
         .resolve()
@@ -112,7 +113,8 @@ export default {
       $.when(vm.getReportLocal())
         .then((contentLocal, status, response) => {
           let reg = /^application\/pdf/
-          let isFound = reg.test(response.getResponseHeader('content-type'))
+          let contentType = response.getResponseHeader('content-type')
+          let isFound = reg.test(contentType)
           return $.Deferred().resolve(isFound, contentLocal).promise()
         })
         .then((isFound, pdf) => {
@@ -123,18 +125,24 @@ export default {
           }
         })
         .then((pdf) => {
-          vm.renderDocument(pdf, reportName)
+          return vm.renderDocument(pdf, reportName)
         })
-        .always(() => {
+        .then(() => {
           vm.isLoading = false
           vm.reportId = ''
         })
-        .fail(() => {
-          vm.hasError = true
-        })
-        .always(() => {
-          vm.isLoading = false
-          vm.reportId = ''
+        .fail((e) => {
+          vm.getReportServer()
+            .then((pdf) => {
+              return vm.renderDocument(pdf, reportName)
+            })
+            .fail(() => {
+              vm.hasError = true
+            })
+            .always(() => {
+              vm.isLoading = false
+              vm.reportId = ''
+            })
         })
     }
   },

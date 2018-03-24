@@ -30,17 +30,22 @@
                 </ul>
             </div>
 
-            <div class="col-md-2 padding-tb50">
+            <div class="col-md-1">
                 &nbsp;
             </div>
 
-            <div class="col-md-4 padding-tb50">
+            <div class="col-md-5 padding-tb50">
               <div class="contact-details">
                 <div>
                   <span class="glyphicon glyphicon-map-marker"></span>
                   <p>
-                    JEWELRY TRADE CENTER (SILOM GALLERIA)<br>
-                    341A/A, 3rd FLOOR, SILOM ROAD, BANGRAK, BANGKOK, THAILAND, 10500
+                      1) &nbsp; JEWELRY TRADE CENTER (SILOM GALLERIA)<br>
+                      341A/A, 3rd FLOOR, SILOM ROAD, BANGRAK, BANGKOK, THAILAND, 10500
+                  </p>
+                  <br>
+                  <p>
+                      2) &nbsp; CHAN GEMS BUILDING<br>
+                      ROOM D202/1 2ND FLOOR, 189 SICHUAN RD. MUEANG CHANTHABURI DISTRICT, CHANTHABURI 220
                   </p>
                 </div>
                 <div>
