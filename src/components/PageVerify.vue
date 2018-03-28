@@ -47,35 +47,22 @@ export default {
     }
   },
   methods: {
-    renderDocument: function (content, reportName) {
-      // IE doesn't allow using a blob object directly as link href
-      // instead it is necessary to use msSaveOrOpenBlob
-      if (window.navigator && window.navigator.msSaveOrOpenBlob) {
-        console.log('render by open blob')
-        window.navigator.msSaveOrOpenBlob(content, reportName)
-      } else {
-        let a = document.createElement('a')
-        let url = window.URL.createObjectURL(content)
-        a.href = url
-        a.download = reportName
-        a.click()
-        window.URL.revokeObjectURL(url)
-        console.log('render by revoke object')
-      }
+    renderDocument: function (url) {
+      let a = document.createElement('a')
+      a.href = url
+      a.target = '_blank'
+      a.click()
+      console.log('revoke url by Anchor')
       return $.Deferred()
         .resolve()
         .promise()
     },
 
-    getReportServer: function () {
+    getReportServer: function (url) {
       // id: 1803SNV0075
-      let url =
-        'http://dreamxchange-001-site3.btempurl.com/api/certificates/download'
-      let data = { id: this.reportId }
       return $.ajax({
         method: 'GET',
         url: url,
-        data: data,
         crossDomain: true,
         xhrFields: {
           responseType: 'blob',
@@ -84,10 +71,8 @@ export default {
       })
     },
 
-    getReportLocal: function () {
+    getReportLocal: function (url) {
       // id: 1803CDR9999
-      // let url = `/static/content/${this.reportId}.pdf`
-      let url = `/certificates/${this.reportId}.pdf`
       return $.ajax({
         method: 'GET',
         url: url,
@@ -108,9 +93,10 @@ export default {
       vm.hasError = false
       vm.isLoading = true
 
-      let reportName = `${vm.reportId}.pdf`
+      let localUrl = `/certificates/${this.reportId}.pdf`
+      let apiUrl = `http://dreamxchange-001-site3.btempurl.com/api/certificates/DownloadAndOpen?id=${this.reportId}`
 
-      $.when(vm.getReportLocal())
+      $.when(vm.getReportLocal(localUrl))
         .then((contentLocal, status, response) => {
           let reg = /^application\/pdf/
           let contentType = response.getResponseHeader('content-type')
@@ -119,22 +105,25 @@ export default {
         })
         .then((isFound, pdf) => {
           if (isFound) {
-            return $.Deferred().resolve(pdf).promise()
+            return $.Deferred().resolve(localUrl).promise()
           } else {
-            return vm.getReportServer()
+            return $.when(vm.getReportServer(apiUrl))
+              .then(() => {
+                return $.Deferred().resolve(apiUrl).promise()
+              })
           }
         })
-        .then((pdf) => {
-          return vm.renderDocument(pdf, reportName)
+        .then((targetUrl) => {
+          return vm.renderDocument(targetUrl)
         })
         .then(() => {
           vm.isLoading = false
           vm.reportId = ''
         })
         .fail((e) => {
-          vm.getReportServer()
+          vm.getReportServer(apiUrl)
             .then((pdf) => {
-              return vm.renderDocument(pdf, reportName)
+              return vm.renderDocument(apiUrl)
             })
             .fail(() => {
               vm.hasError = true
@@ -190,6 +179,11 @@ export default {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@media (max-width: 768px) {
+  #verify_header{
+      height: 230px;
   }
 }
 </style>

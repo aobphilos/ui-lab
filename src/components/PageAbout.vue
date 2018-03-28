@@ -123,4 +123,9 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
 }
+@media (max-width: 768px) {
+  #about_header{
+      height: 230px;
+  }
+}
 </style>

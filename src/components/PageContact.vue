@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
                 <h4 class="h4-type3">CONTACT</h4>
-                <div class="border-bar4 margin-t20 "></div>
+                <div class="border-bar4 margin-t20"></div>
                 </div>
             </div>
             </div>
@@ -19,50 +19,68 @@
         <section id="contact_form" class="padding-tb50">
             <div class="container">
             <div class="row">
-                <div class="col-md-5 col-sm-5 col-xs-12">
+                <div class="col-md-6 col-sm-6 col-xs-12">
                     <!-- <img src="../assets/img/brands/5.png" alt="Design"> -->
                 </div>
-                <div class="col-md-7 col-sm-7 col-xs-12 margin-t30">
+                <div class="col-md-6 col-sm-6 col-xs-12 margin-t30">
                     <div class="col-md-12 col-sm-12 col-xs-12 contact_detail">
-                        <div class=" col-md-3 col-xs-12 text-center ">
-                            <span class="icon ti-location-pin"></span>
-                        </div>
-                        <div class="col-md-9 col-xs-12">
-                            <p>
-                                1) JEWELRY TRADE CENTER (SILOM GALLERIA)<br>
-                                341A/A, 3rd FLOOR, SILOM ROAD, BANGRAK, BANGKOK, THAILAND, 10500
-                            </p>
-                            <p>
-                                2) CHAN GEMS BUILDING<br>
-                                ROOM D202/1 2ND FLOOR, 189 SICHUAN RD. MUEANG CHANTHABURI DISTRICT, CHANTHABURI 220
+                        <h4 class="h4-type1">Bangkok</h4>
+                        <div>
+                            <p class="p-type-3">
+                                Jewelry Trade Center<br>
+                                341A/A 3 Floor Silom road Bangrak Bangkok 10500<br>
+                                Tel: +(66)2 630 0699
                             </p>
                         </div>
                     </div>
                     <div class="col-md-12 col-sm-12 col-xs-12 contact_detail">
-                        <div class=" col-md-3 col-xs-12 text-center">
-                            <span class="icon ti-headphone"></span>
-                        </div>
-                        <div class="col-md-9 col-xs-12">
-                            <p>(66)83 916 7158, (66)2 630 0699</p>
+                        <h4 class="h4-type1">Chanthaburi</h4>
+                        <div>
+                            <p class="p-type-3">
+                                Room D202/1 2nd Floor, Chan Gems Building<br>
+                                189 Sichuan Rd. Mueang Chanthaburi District, Chanthaburi 22000
+                            </p>
                         </div>
                     </div>
-                    <div class="col-md-12 col-sm-12 col-xs-12 contact_detail text-center">
-                        <div class="col-md-3 col-xs-12">
+                    <div class="col-md-12 col-sm-12 col-xs-12 contact_detail">
+                        <div class="col-md-1 col-xs-2">
+                           <img src="../assets/img/social/line.svg" class="logo" title="Line" alt="LINE">
+                        </div>
+                        <div class="col-md-7 col-xs-6">
+                            <p class="logo">Line ID : gcilab</p>
+                        </div>
+                        <div class="col-md-4 col-xs-4">
+                            <img src="../assets/img/contact/qr-line.jpg" class="qrcode" alt="QR-LINE">
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 contact_detail">
+                        <div class="col-md-1 col-xs-2">
+                           <img src="../assets/img/social/wechat.svg" class="logo" title="WeChat" alt="WeChat">
+                        </div>
+                        <div class="col-md-7 col-xs-6">
+                            <p class="logo">Wechat : gcilab</p>
+                        </div>
+                        <div class="col-md-4 col-xs-4">
+                            <img src="../assets/img/contact/qr-wechat.jpg" class="qrcode" title="WeChat"  alt="QR-WeChat">
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 contact_detail">
+                        <div class="col-md-1 col-xs-2">
+                           <img src="../assets/img/social/facebook.svg" class="logo" title="Facebook" alt="Facebook">
+                        </div>
+                        <div class="col-md-7 col-xs-6">
+                            <p class="logo">Facebook : gcilab</p>
+                        </div>
+                        <div class="col-md-4 col-xs-4">
                             &nbsp;
                         </div>
-                        <div class="col-md-3 col-xs-12">
-                            <div><span>LINE</span></div>
-                            <img src="../assets/img/contact/qr-line.jpg" alt="LINE">
-                        </div>
-                        <div class="col-md-1 col-xs-12">
-                            &nbsp;
-                        </div>
-                        <div class="col-md-3 col-xs-12">
-                            <div><span>WeChat</span></div>
-                            <img src="../assets/img/contact/qr-wechat.jpg" alt="WeChat">
-                        </div>
-                        <div class="col-md-2 col-xs-12">
-                            &nbsp;
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 contact_detail">
+                        <h4 class="h4-type1"></h4>
+                        <div>
+                            <p class="p-type-3">
+                                Tel: +(66)83 916 7158
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -101,5 +119,10 @@ export default {
   background-image: url(../assets/img/cover/default.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+@media (max-width: 768px) {
+  #contact_header{
+      height: 230px;
+  }
 }
 </style>
