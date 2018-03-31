@@ -19,8 +19,8 @@
         <section id="contact_form" class="padding-tb50">
             <div class="container">
             <div class="row">
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                    <!-- <img src="../assets/img/brands/5.png" alt="Design"> -->
+                <div class="col-md-6 col-sm-6 col-xs-12 text-center">
+                    <img src="../assets/img/contact/contact.jpg" alt="Design" id="imgContactUs">
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-12 margin-t30">
                     <div class="col-md-12 col-sm-12 col-xs-12 contact_detail">
@@ -120,9 +120,15 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
 }
+#imgContactUs {
+    width: 75%;
+}
 @media (max-width: 768px) {
   #contact_header{
       height: 230px;
   }
+  #imgContactUs {
+    width: 80%;
+}
 }
 </style>
