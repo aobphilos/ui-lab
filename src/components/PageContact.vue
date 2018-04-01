@@ -19,10 +19,10 @@
         <section id="contact_form" class="padding-tb50">
             <div class="container">
             <div class="row">
-                <div class="col-md-6 col-sm-6 col-xs-12 text-center">
+                <div class="col-md-7 col-sm-7 col-xs-12 text-center">
                     <img src="../assets/img/contact/contact.jpg" alt="Design" id="imgContactUs">
                 </div>
-                <div class="col-md-6 col-sm-6 col-xs-12 margin-t30">
+                <div class="col-md-5 col-sm-5 col-xs-12">
                     <div class="col-md-12 col-sm-12 col-xs-12 contact_detail">
                         <h4 class="h4-type1">Bangkok</h4>
                         <div>
@@ -50,7 +50,9 @@
                             <p class="logo">Line ID : gcilab</p>
                         </div>
                         <div class="col-md-4 col-xs-4">
-                            <img src="../assets/img/contact/qr-line.jpg" class="qrcode" alt="QR-LINE">
+                            <a href="../static/img/contact/qr-line-550.jpg" data-lightbox="qr-line-lightbox" data-alt="QR Line">
+                              <img src="../assets/img/contact/qr-line.jpg" class="qrcode" alt="QR-LINE">
+                            </a>
                         </div>
                     </div>
                     <div class="col-md-12 col-sm-12 col-xs-12 contact_detail">
@@ -61,7 +63,9 @@
                             <p class="logo">Wechat : gcilab</p>
                         </div>
                         <div class="col-md-4 col-xs-4">
-                            <img src="../assets/img/contact/qr-wechat.jpg" class="qrcode" title="WeChat"  alt="QR-WeChat">
+                            <a href="../static/img/contact/qr-wechat-550.jpg" data-lightbox="qr-wechat-lightbox" data-alt="QR WeChat">
+                              <img src="../assets/img/contact/qr-wechat.jpg" class="qrcode" title="WeChat"  alt="QR-WeChat">
+                            </a>
                         </div>
                     </div>
                     <div class="col-md-12 col-sm-12 col-xs-12 contact_detail">
@@ -121,14 +125,14 @@ export default {
   background-size: cover;
 }
 #imgContactUs {
-    width: 75%;
+    width: 100%;
 }
 @media (max-width: 768px) {
   #contact_header{
       height: 230px;
   }
   #imgContactUs {
-    width: 80%;
-}
+    width: 93%;
+  }
 }
 </style>
