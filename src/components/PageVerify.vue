@@ -17,21 +17,43 @@
     <!-- Verify heading end-->
     <!-- what we do  -->
     <section id="verify" class="padding-tb50">
-        <div class="container">
-            <form action="#/verify">
-                <div class="row">
-                    <div class="col-md-5">
-                            <div class="form-group">
-                                <label for="verifyId">Please use this form to search your verify report</label><br><br>
-                                <input type="text" class="input_text" name="verifyId" placeholder="Enter Report ID" v-model="reportId" v-bind:disabled="isLoading" >
-
-                            </div>
-                            <button name="submit" class="input_submit" @click.prevent="getReport" v-bind:disabled="isLoading">Search <i class="glyphicon glyphicon-refresh" v-bind:class="{loader: isLoading}"></i></button>
-                        <p class="p-type-3 color-grey margin-t20"><span class="error" v-show="hasError">** Invalid Report Id **</span></p>
+      <div class="container">
+          <div class="row">
+              <div class="col-md-4 col-sm-5 col-xs-12">
+                <div class="padding-tb25">
+                  <form action="#/verify">
+                    <div class="form-group">
+                        <label for="verifyId">Please use this form to search your verify report</label>
+                        <br>
+                        <br>
+                        <input type="text" class="input_text" name="verifyId" placeholder="Enter Report ID" v-model="reportId" v-bind:disabled="isLoading">
                     </div>
+                    <button name="submit" class="input_submit" @click.prevent="getReport" v-bind:disabled="isLoading">Search
+                        <i class="glyphicon glyphicon-refresh" v-bind:class="{loader: isLoading}"></i>
+                    </button>
+                    <p class="p-type-3 color-grey margin-t20">
+                        <span class="error" v-show="hasError">** Invalid Report Id **</span>
+                    </p>
+                  </form>
                 </div>
-            </form>
-        </div>
+              </div>
+              <div class="col-md-8 col-sm-7 col-xs-12 text-center">
+                  <div class="row wrapper-image">
+                    <h4 class="h4-type1">Sample Report</h4>
+                  </div>
+                  <div class="row wrapper-image">
+                      <a href="../static/img/verify/verify1.jpg" data-lightbox="sample-verify1-lightbox" data-alt="Sample Verify Image">
+                          <img src="../assets/img/verify/verify1.jpg" alt="Sample Verify Image">
+                      </a>
+                  </div>
+                  <div class="row wrapper-image">
+                      <a href="../static/img/verify/verify2.jpg" data-lightbox="sample-verify2-lightbox" data-alt="Sample Verify Image">
+                          <img src="../assets/img/verify/verify2.jpg" alt="Sample Verify Image">
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </div>
     </section>
     <!-- what we do  end-->
 </div>
@@ -94,35 +116,43 @@ export default {
       vm.isLoading = true
 
       let localUrl = `/certificates/${this.reportId}.pdf`
-      let apiUrl = `http://dreamxchange-001-site3.btempurl.com/api/certificates/DownloadAndOpen?id=${this.reportId}`
+      let apiUrl = `http://dreamxchange-001-site3.btempurl.com/api/certificates/DownloadAndOpen?id=${
+        this.reportId
+      }`
 
       $.when(vm.getReportLocal(localUrl))
         .then((contentLocal, status, response) => {
           let reg = /^application\/pdf/
           let contentType = response.getResponseHeader('content-type')
           let isFound = reg.test(contentType)
-          return $.Deferred().resolve(isFound, contentLocal).promise()
+          return $.Deferred()
+            .resolve(isFound, contentLocal)
+            .promise()
         })
         .then((isFound, pdf) => {
           if (isFound) {
-            return $.Deferred().resolve(localUrl).promise()
+            return $.Deferred()
+              .resolve(localUrl)
+              .promise()
           } else {
-            return $.when(vm.getReportServer(apiUrl))
-              .then(() => {
-                return $.Deferred().resolve(apiUrl).promise()
-              })
+            return $.when(vm.getReportServer(apiUrl)).then(() => {
+              return $.Deferred()
+                .resolve(apiUrl)
+                .promise()
+            })
           }
         })
-        .then((targetUrl) => {
+        .then(targetUrl => {
           return vm.renderDocument(targetUrl)
         })
         .then(() => {
           vm.isLoading = false
           vm.reportId = ''
         })
-        .fail((e) => {
-          vm.getReportServer(apiUrl)
-            .then((pdf) => {
+        .fail(e => {
+          vm
+            .getReportServer(apiUrl)
+            .then(pdf => {
               return vm.renderDocument(apiUrl)
             })
             .fail(() => {
@@ -163,6 +193,9 @@ export default {
   font-weight: 400;
   font-size: 15px;
 }
+.wrapper-image {
+  padding: 25px 15px;
+}
 /* Safari */
 @-webkit-keyframes spin {
   0% {
@@ -182,8 +215,8 @@ export default {
   }
 }
 @media (max-width: 768px) {
-  #verify_header{
-      height: 230px;
+  #verify_header {
+    height: 230px;
   }
 }
 </style>
