@@ -4,6 +4,7 @@ const utils = require('./utils')
 const webpack = require('webpack')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 function resolve(dir) {
   return path.join(__dirname, '..', dir)
@@ -90,6 +91,9 @@ module.exports = {
     child_process: 'empty'
   },
   plugins: [
+    new BundleAnalyzerPlugin({
+      'process.env.NODE_ENV': '"production"'
+    }),
     new webpack.ProvidePlugin({
       '$': 'jquery',
       'jQuery': 'jquery',
