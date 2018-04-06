@@ -1,23 +1,16 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <section-header/>
     <router-view/>
+    <section-footer/>
   </div>
 </template>
 
 <script>
+import SectionHeader from '@/components/SectionHeader'
+import SectionFooter from '@/components/SectionFooter'
 export default {
-  name: 'App'
+  name: 'App',
+  components: { SectionHeader, SectionFooter }
 }
 </script>
-
-<style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
