@@ -5,38 +5,28 @@
             <ul class="slides">
                 <li class="bg-img-1">
                     <div class="flex-caption fadeInUp animated container">
-                        <p class="p-type-1">MULTIPURPOSE HTML5 RESPONSIVE THEME</p>
-                        <h5 class="h5-type-1 margin-t20">Clean &amp; Modern Design</h5>
+                        <p class="p-type-1">&nbsp;</p>
+                        <h5 class="h5-type-1 margin-t20">ENSURE THE TRUST IN GEMS</h5>
                         <div class="border-bar margin-t20 "></div>
-                        <p class="p-type-2 margin-t20 text-justify">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum.</p>
-                        <a href="#" class="btn login-btn">GET STARTED</a>
+                        <p class="p-type-2 margin-t20 text-justify">&nbsp;</p>
                     </div>
                 </li>
-
                 <li class="bg-img-2">
-                    <div class="flex-caption fadeInUp animated container">
-                        <p class="p-type-1">MULTIPURPOSE HTML5 RESPONSIVE THEME</p>
-                        <h5 class="h5-type-1 margin-t20">Clean &amp; Modern Design</h5>
+                     <div class="flex-caption fadeInUp animated container">
+                        <p class="p-type-1">&nbsp;</p>
+                        <h5 class="h5-type-1 margin-t20">ANY GEMSTONE KNOWLEDGE</h5>
                         <div class="border-bar margin-t20 "></div>
-                        <p class="p-type-2 margin-t20 text-justify">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in
-                        some form, by injected humour, or randomised words which don't look even slightly believable. If you are going
-                        to use a passage of Lorem Ipsum.</p>
-                        <a href="#" class="btn login-btn">GET STARTED</a>
+                        <p class="p-type-2 margin-t20 text-justify">&nbsp;</p>
                     </div>
                 </li>
-
                 <li class="bg-img-3">
                     <div class="flex-caption fadeInUp animated container">
-                        <p class="p-type-1">MULTIPURPOSE HTML5 RESPONSIVE THEME</p>
-                        <h5 class="h5-type-1 margin-t20">Clean &amp; Modern Design</h5>
+                        <p class="p-type-1">&nbsp;</p>
+                        <h5 class="h5-type-1 margin-t20">GCILAB.COM</h5>
                         <div class="border-bar margin-t20 "></div>
-                        <p class="p-type-2 margin-t20 text-justify">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in
-                        some form, by injected humour, or randomised words which don't look even slightly believable. If you are going
-                        to use a passage of Lorem Ipsum.</p>
-                        <a href="#" class="btn login-btn">GET STARTED</a>
+                        <p class="p-type-2 margin-t20 text-justify">&nbsp;</p>
                     </div>
                 </li>
-
             </ul>
         </div>
     </section>
@@ -57,6 +47,18 @@ export default {
 .bg-img-2 {
   background-image: url("../assets/img/slides/slide2.jpg");
 }
+.bg-img-2 .flex-caption {
+  width: 63%;
+  float: right;
+}
+
+@media (max-width: 992px) {
+  .bg-img-2 .flex-caption {
+    width: inherit;
+    float: inherit;
+  }
+}
+
 .bg-img-3 {
   background-image: url("../assets/img/slides/slide3.jpg");
 }

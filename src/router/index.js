@@ -3,12 +3,12 @@ import Router from 'vue-router'
 import PageLanding from '@/components/PageLanding'
 import PageAbout from '@/components/PageAbout'
 import PageServices from '@/components/PageServices'
-import PageVerified from '@/components/PageVerified'
+import PageVerify from '@/components/PageVerify'
 import PageContact from '@/components/PageContact'
 
 Vue.use(Router)
 
-export default new Router({
+var mainRouter = new Router({
   routes: [{
     path: '/',
     name: 'PageLanding',
@@ -25,9 +25,9 @@ export default new Router({
     component: PageServices
   },
   {
-    path: '/verified',
-    name: 'PageVerified',
-    component: PageVerified
+    path: '/verify',
+    name: 'PageVerify',
+    component: PageVerify
   },
   {
     path: '/contact',
@@ -36,3 +36,8 @@ export default new Router({
   }
   ]
 })
+mainRouter.afterEach((to, from) => {
+  $('#navigation').css('height', '80px')
+  $('.nav-btn-open').removeClass('ti-close').addClass('ti-menu')
+})
+export default mainRouter

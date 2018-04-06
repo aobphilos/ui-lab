@@ -7,7 +7,7 @@ var FlexSlider = {
         animation: 'slide',
         controlNav: true,
         easing: 'easeInCubic',
-        slideshowSpeed: 4000,
+        slideshowSpeed: 5500,
         animationSpeed: 1200,
         pauseOnAction: true,
         touch: true,
