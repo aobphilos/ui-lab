@@ -70,11 +70,13 @@ export default {
   },
   methods: {
     renderDocument: function (url) {
-      let a = document.createElement('a')
-      a.href = url
-      a.target = '_blank'
-      a.click()
-      console.log('revoke url by Anchor')
+      setTimeout(() => {
+        let a = document.createElement('a')
+        a.href = url
+        a.target = '_blank'
+        a.click()
+        console.log('revoke url by Anchor')
+      }, 100)
       return $.Deferred()
         .resolve()
         .promise()
@@ -95,6 +97,8 @@ export default {
 
     getReportLocal: function (url) {
       // id: 1803CDR9999
+      // id: 1206_CDS0001 -> outter
+      // id: 1206_CDR0001 -> inner
       return $.ajax({
         method: 'GET',
         url: url,
@@ -103,6 +107,12 @@ export default {
           withCredentials: true
         }
       })
+    },
+
+    checkValidReport: function (response) {
+      let reg = /^application\/pdf/
+      let contentType = response.getResponseHeader('content-type')
+      return reg.test(contentType)
     },
 
     getReport: function () {
@@ -116,51 +126,55 @@ export default {
       vm.isLoading = true
 
       let localUrl = `/certificates/${this.reportId}.pdf`
+      let localSubFolderUrl = `/certificates/${this.reportId.substr(0, 4)}/${
+        this.reportId
+      }.pdf`
       let apiUrl = `http://dreamxchange-001-site3.btempurl.com/api/certificates/DownloadAndOpen?id=${
         this.reportId
       }`
 
       $.when(vm.getReportLocal(localUrl))
-        .then((contentLocal, status, response) => {
-          let reg = /^application\/pdf/
-          let contentType = response.getResponseHeader('content-type')
-          let isFound = reg.test(contentType)
-          return $.Deferred()
-            .resolve(isFound, contentLocal)
-            .promise()
-        })
-        .then((isFound, pdf) => {
-          if (isFound) {
-            return $.Deferred()
-              .resolve(localUrl)
-              .promise()
+        .then((content, status, response) => {
+          if (vm.checkValidReport(response)) {
+            return vm.renderDocument(localUrl)
           } else {
-            return $.when(vm.getReportServer(apiUrl)).then(() => {
-              return $.Deferred()
-                .resolve(apiUrl)
-                .promise()
-            })
+            return $.Deferred()
+              .reject()
+              .promise()
           }
-        })
-        .then(targetUrl => {
-          return vm.renderDocument(targetUrl)
         })
         .then(() => {
           vm.isLoading = false
           vm.reportId = ''
         })
-        .fail(e => {
-          vm
-            .getReportServer(apiUrl)
-            .then(pdf => {
-              return vm.renderDocument(apiUrl)
+        .fail(() => {
+          $.when(vm.getReportLocal(localSubFolderUrl))
+            .then((content, status, response) => {
+              if (vm.checkValidReport(response)) {
+                return vm.renderDocument(localSubFolderUrl)
+              } else {
+                return $.Deferred()
+                  .reject()
+                  .promise()
+              }
             })
-            .fail(() => {
-              vm.hasError = true
-            })
-            .always(() => {
+            .then(() => {
               vm.isLoading = false
               vm.reportId = ''
+            })
+            .fail(() => {
+              vm
+                .getReportServer(apiUrl)
+                .then(() => {
+                  return vm.renderDocument(apiUrl)
+                })
+                .fail(() => {
+                  vm.hasError = true
+                })
+                .always(() => {
+                  vm.isLoading = false
+                  vm.reportId = ''
+                })
             })
         })
     }
