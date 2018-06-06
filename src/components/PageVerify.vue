@@ -32,6 +32,7 @@
                         <i class="glyphicon glyphicon-refresh" v-bind:class="{loader: isLoading}"></i>
                     </button>
                     <p class="p-type-3 color-grey margin-t20">
+                        <span v-show="isPass"><a :href="currentUrl" target="_blank" >Open File</a></span>
                         <span class="error" v-show="hasError">** Invalid Report Id **</span>
                     </p>
                   </form>
@@ -65,21 +66,15 @@ export default {
     return {
       reportId: '',
       isLoading: false,
-      hasError: false
+      hasError: false,
+      currentUrl: '',
+      isPass: false
     }
   },
   methods: {
-    renderDocument: function (url) {
-      setTimeout(() => {
-        let a = document.createElement('a')
-        a.href = url
-        a.target = '_blank'
-        a.click()
-        console.log('revoke url by Anchor')
-      }, 100)
-      return $.Deferred()
-        .resolve()
-        .promise()
+    renderDocument: function (url, fileName) {
+      this.isPass = true
+      this.currentUrl = url
     },
 
     getReportServer: function (url) {
@@ -124,11 +119,15 @@ export default {
 
       vm.hasError = false
       vm.isLoading = true
+      vm.isPass = false
+      vm.currentUrl = ''
 
+      let reportName = `${this.reportId}.pdf`
       let localUrl = `/certificates/${this.reportId}.pdf`
-      let localSubFolderUrl = `/certificates/${this.reportId.substr(0, 4)}/${
-        this.reportId
-      }.pdf`
+      let localSubFolderUrl = `/certificates/${this.reportId.substr(
+        0,
+        4
+      )}/${this.reportId}.pdf`
       let apiUrl = `http://dreamxchange-001-site3.btempurl.com/api/certificates/DownloadAndOpen?id=${
         this.reportId
       }`
@@ -136,7 +135,7 @@ export default {
       $.when(vm.getReportLocal(localUrl))
         .then((content, status, response) => {
           if (vm.checkValidReport(response)) {
-            return vm.renderDocument(localUrl)
+            return vm.renderDocument(localUrl, reportName)
           } else {
             return $.Deferred()
               .reject()
@@ -151,7 +150,7 @@ export default {
           $.when(vm.getReportLocal(localSubFolderUrl))
             .then((content, status, response) => {
               if (vm.checkValidReport(response)) {
-                return vm.renderDocument(localSubFolderUrl)
+                return vm.renderDocument(localSubFolderUrl, reportName)
               } else {
                 return $.Deferred()
                   .reject()
@@ -166,7 +165,7 @@ export default {
               vm
                 .getReportServer(apiUrl)
                 .then(() => {
-                  return vm.renderDocument(apiUrl)
+                  return vm.renderDocument(apiUrl, reportName)
                 })
                 .fail(() => {
                   vm.hasError = true
