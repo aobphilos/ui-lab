@@ -32,7 +32,7 @@
                         <i class="glyphicon glyphicon-refresh" v-bind:class="{loader: isLoading}"></i>
                     </button>
                     <p class="p-type-3 color-grey margin-t20">
-                        <span v-show="isPass"><a :href="currentUrl" target="_blank" >Open File</a></span>
+                        <span v-show="isPass"><a :href="currentUrl" target="_blank" >Open File | เปิดไฟล์ | 点击这</a></span>
                         <span class="error" v-show="hasError">** Invalid Report Id **</span>
                     </p>
                   </form>
