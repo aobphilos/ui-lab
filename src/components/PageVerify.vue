@@ -43,12 +43,12 @@
                     <h4 class="h4-type1">Sample Report</h4>
                   </div>
                   <div class="row wrapper-image">
-                      <a href="../static/img/verify/verify1.jpg" data-lightbox="sample-verify1-lightbox" data-alt="Sample Verify Image">
+                      <a href="../static/img/verify/verify1.jpg" data-lightbox="sample-lightbox" data-alt="Sample Verify Image">
                           <img src="../assets/img/verify/verify1.jpg" alt="Sample Verify Image">
                       </a>
                   </div>
                   <div class="row wrapper-image">
-                      <a href="../static/img/verify/verify2.jpg" data-lightbox="sample-verify2-lightbox" data-alt="Sample Verify Image">
+                      <a href="../static/img/verify/verify2.jpg" data-lightbox="sample-lightbox" data-alt="Sample Verify Image">
                           <img src="../assets/img/verify/verify2.jpg" alt="Sample Verify Image">
                       </a>
                   </div>

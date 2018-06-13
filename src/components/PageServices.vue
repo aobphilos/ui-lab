@@ -26,15 +26,16 @@
                                 <div>
                                     <p class="p-type-3 color-grey margin-t20">
                                         <ol>
-                                            <li>500 BAHT/STONE</li>
-                                            <li>300 BAHT/STONE</li>
-                                            <li>200 BAHT/STONE</li>
+                                            <li>1,200 BAHT/STONE</li>
+                                            <li>  500 BAHT/STONE</li>
+                                            <li>  300 BAHT/STONE</li>
+                                            <li>  200 BAHT/STONE</li>
                                         </ol>
                                     </p>
                                     <p class="p-type-3 color-grey margin-t20">ONE REPORT CAN BE CONTAINED MULTIPLE STONES DETAILS WITH ADDITIONAL FEE OF 100 BAHT PER STONE.</p>
                                     <div class="example">
                                         <p class="p-type-3 color-grey margin-t20">FOR EXAMPLE:</p>
-                                        <p class="p-type-3 color-grey margin-t20">ONE REPORT (NUMBER 1, 500 BAHT) FOR A PAIR OF RUBIES = THE TOTAL FEE IS 600 BAHT. (500 + 100)</p>
+                                        <p class="p-type-3 color-grey margin-t20">ONE REPORT (NUMBER 1, 1,200 BAHT) FOR A PAIR OF RUBIES = THE TOTAL FEE IS 1,300 BAHT. (1,200 + 100)</p>
                                     </div>
                                 </div>
                             </div>
@@ -52,20 +53,50 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-5 col-xs-12">
+                    <div class="col-md-5 col-xs-12 imgage-box">
                         <div class="row padding-tb25">
-                            <a href="../static/img/services/service-1.jpg" data-lightbox="service-1-lightbox">
+                            <a href="../static/img/services/service-1.jpg" data-lightbox="service-lightbox">
                                 <img src="../assets/img/services/service-1.jpg" alt="Services">
                             </a>
                         </div>
                         <div class="row padding-tb25">
-                            <a href="../static/img/services/service-2.jpg" data-lightbox="service-2-lightbox">
+                            <a href="../static/img/services/service-2.jpg" data-lightbox="service-lightbox">
                                 <img src="../assets/img/services/service-2.jpg" alt="Services">
                             </a>
                         </div>
                         <div class="row padding-tb25">
-                            <a href="../static/img/services/service-3.jpg" data-lightbox="service-3-lightbox">
+                            <a href="../static/img/services/service-3.jpg" data-lightbox="service-lightbox">
                                 <img src="../assets/img/services/service-3.jpg" alt="Services">
+                            </a>
+                        </div>
+                        <div class="row padding-tb25">
+                            <a href="../static/img/services/service-4.jpg" data-lightbox="service-lightbox">
+                                <img src="../assets/img/services/service-4.jpg" alt="Services">
+                            </a>
+                        </div>
+                        <div class="row padding-tb25">
+                            <a href="../static/img/services/service-5.jpg" data-lightbox="service-lightbox">
+                                <img src="../assets/img/services/service-5.jpg" alt="Services">
+                            </a>
+                        </div>
+                        <div class="row padding-tb25">
+                            <a href="../static/img/services/service-6.jpg" data-lightbox="service-lightbox">
+                                <img src="../assets/img/services/service-6.jpg" alt="Services">
+                            </a>
+                        </div>
+                        <div class="row padding-tb25">
+                            <a href="../static/img/services/service-7.jpg" data-lightbox="service-lightbox">
+                                <img src="../assets/img/services/service-7.jpg" alt="Services">
+                            </a>
+                        </div>
+                        <div class="row padding-tb25">
+                            <a href="../static/img/services/service-8.jpg" data-lightbox="service-lightbox">
+                                <img src="../assets/img/services/service-8.jpg" alt="Services">
+                            </a>
+                        </div>
+                        <div class="row padding-tb25">
+                            <a href="../static/img/services/service-9.jpg" data-lightbox="service-lightbox">
+                                <img src="../assets/img/services/service-9.jpg" alt="Services">
                             </a>
                         </div>
                     </div>
@@ -97,6 +128,15 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.imgage-box .padding-tb25 {
+        padding: 15px 0;
+        margin: 10px 0;
+        text-align: center;
+        border: 2px solid lightgray;
+        border-radius: 25px;
+}
+
 @media (max-width: 768px) {
   #services_header{
       height: 230px;
