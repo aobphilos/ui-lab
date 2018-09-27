@@ -34,6 +34,8 @@
                     <p class="p-type-3 color-grey margin-t20">
                         <span v-show="isPass"><a :href="currentUrl" target="_blank" >Open File | เปิดไฟล์ | 点击这</a></span>
                         <span class="error" v-show="hasError">** Invalid Report Id **</span>
+                        <br>
+                        <span class="error" v-show="hasError">"GCi reports can be verified after 5 business days" (from the date of issued)</span>
                     </p>
                   </form>
                 </div>
@@ -50,6 +52,11 @@
                   <div class="row wrapper-image">
                       <a href="../static/img/verify/verify2.jpg" data-lightbox="sample-lightbox" data-alt="Sample Verify Image">
                           <img src="../assets/img/verify/verify2.jpg" alt="Sample Verify Image">
+                      </a>
+                  </div>
+                   <div class="row wrapper-image">
+                      <a href="../static/img/verify/verify3.jpg" data-lightbox="sample-lightbox" data-alt="Sample Verify Image">
+                          <img src="../assets/img/verify/verify3.jpg" alt="Sample Verify Image">
                       </a>
                   </div>
               </div>
@@ -124,10 +131,9 @@ export default {
 
       let reportName = `${this.reportId}.pdf`
       let localUrl = `/certificates/${this.reportId}.pdf`
-      let localSubFolderUrl = `/certificates/${this.reportId.substr(
-        0,
-        4
-      )}/${this.reportId}.pdf`
+      let localSubFolderUrl = `/certificates/${this.reportId.substr(0, 4)}/${
+        this.reportId
+      }.pdf`
       let apiUrl = `http://dreamxchange-001-site3.btempurl.com/api/certificates/DownloadAndOpen?id=${
         this.reportId
       }`
@@ -162,8 +168,7 @@ export default {
               vm.reportId = ''
             })
             .fail(() => {
-              vm
-                .getReportServer(apiUrl)
+              vm.getReportServer(apiUrl)
                 .then(() => {
                   return vm.renderDocument(apiUrl, reportName)
                 })

@@ -26,8 +26,8 @@
                                 <div>
                                     <p class="p-type-3 color-grey margin-t20">
                                         <ol>
-                                            <li>1,200 BAHT/STONE</li>
-                                            <li>  500 BAHT/STONE</li>
+                                            <li>  600 BAHT/STONE</li>
+                                            <li>  400 BAHT/STONE</li>
                                             <li>  300 BAHT/STONE</li>
                                             <li>  200 BAHT/STONE</li>
                                         </ol>
@@ -35,7 +35,7 @@
                                     <p class="p-type-3 color-grey margin-t20">ONE REPORT CAN BE CONTAINED MULTIPLE STONES DETAILS WITH ADDITIONAL FEE OF 100 BAHT PER STONE.</p>
                                     <div class="example">
                                         <p class="p-type-3 color-grey margin-t20">FOR EXAMPLE:</p>
-                                        <p class="p-type-3 color-grey margin-t20">ONE REPORT (NUMBER 1, 1,200 BAHT) FOR A PAIR OF RUBIES = THE TOTAL FEE IS 1,300 BAHT. (1,200 + 100)</p>
+                                        <p class="p-type-3 color-grey margin-t20">ONE REPORT (NUMBER 1, 600 BAHT) FOR A PAIR OF RUBIES = THE TOTAL FEE IS 700 BAHT. (600 + 100)</p>
                                     </div>
                                 </div>
                             </div>
