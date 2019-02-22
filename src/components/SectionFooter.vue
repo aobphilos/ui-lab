@@ -40,7 +40,7 @@
                   <div>
                       <p class="p-type-3">
                           Jewelry Trade Center<br>
-                          341A/A 3 Floor Silom road Bangrak Bangkok 10500<br>
+                          341A/A 3rd Floor Silom road Bangrak Bangkok 10500<br>
                           Tel: +(66)2 630 0699
                       </p>
                   </div>
