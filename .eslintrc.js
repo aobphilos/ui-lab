@@ -35,6 +35,7 @@ module.exports = {
     "easing": true,
     "SmoothScroll": true,
     "parallax": true,
-    "lightbox" : true
+    "lightbox" : true,
+    "fetch": true
   }
 }
